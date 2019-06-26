@@ -1,0 +1,8 @@
+@media all and (min-width: 480px) {
+    .Header {
+      color:gold;
+      font-size:32px;
+      font-weight: bold;
+    }
+  
+}

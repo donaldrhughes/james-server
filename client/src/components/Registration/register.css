@@ -1,0 +1,15 @@
+@media all and (min-width: 480px) {
+    .register {
+        margin: 0 auto;
+        margin-top: 2%;
+        max-width: 250px;
+    }
+
+    .registerText {
+        text-align:center;
+        color:black;
+        font-size:16px;
+        text-align:center;
+    }
+    
+  }

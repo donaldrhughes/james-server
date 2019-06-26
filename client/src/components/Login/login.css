@@ -1,0 +1,55 @@
+@media all and (min-width: 480px) {
+    .LoginText {
+      margin-top:5%;
+      text-align:center;
+      color:black;
+      font-size:16px;
+    }
+  
+    .Login form {
+      color:black;
+      max-width: 320px;
+    }
+
+    .RegisterBtn {
+      color:black;
+      margin: 0 auto;
+      margin-top: 8%;
+      max-width: 200px;
+      
+    }
+    .LoginBtn {
+      color:black;
+      margin: 0 auto;
+      margin-top: 10%;
+      max-width: 300px;
+    }
+
+    .New {
+      margin-top:10%;
+      text-align:center;
+      color:black;
+      font-size:20px;
+    }
+  
+  .PleaseLogin{
+    margin-top:5%;
+    text-align:center;
+    color:black;
+    font-size:26px;
+
+  }
+
+  .submit {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: blue;
+    color:white;
+  }
+  
+  .submit:hover {
+    background-color: black; 
+    color: white;
+  }
+  
+  }
