@@ -57,12 +57,12 @@ class Registration extends React.Component {
 render() {
   return (
     <div>
-      <div className="registerText">We promise we won't sell your information.. unless the price is right.</div>
+      <div className="registerText">Fine products.</div>
 
       <div className="register">
 
         <div align="center">
-        To Create a New Family Enter the Below Information:
+        
           <form onSubmit={this.handleSubmit}> 
 
             <FormGroup>

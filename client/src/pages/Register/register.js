@@ -39,7 +39,7 @@ class Register extends Component {
                         </Row>
                         <Row>
                             <Col />
-                            <Col-6><div className="Header">Sign Up For Tournament Zilch!</div></Col-6>
+                            <Col-6><div className="Header">Sign Up For James Albert!</div></Col-6>
                             <Col />
                         </Row>
                         <Row>

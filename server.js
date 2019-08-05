@@ -2,28 +2,25 @@
 //=====================
 require("dotenv").config();
 const express = require("express");
-// const jwt = require('express-jwt');
+const jwt = require('express-jwt');
 const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
-
-const axios = require("axios")
 const models = require("./models");
 const routes = require("./routes");
 
-// var auth = jwt({
-//   secret: process.env.JWT_SECRET,
-//   getToken: function fromHeaderOrQuerystring (req) {
-//     if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
-//         return req.headers.authorization.split(' ')[1];
-//     } else if (req.cookies.token) {
-//       return req.cookies.token;
-//     }
-//     return null;
-//   }
-// });
 
-
+var auth = jwt({
+  secret: process.env.JWT_SECRET,
+  getToken: function fromHeaderOrQuerystring (req) {
+    if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
+        return req.headers.authorization.split(' ')[1];
+    } else if (req.cookies.token) {
+      return req.cookies.token;
+    }
+    return null;
+  }
+});
 
 
 // Define middleware here
@@ -39,7 +36,6 @@ if (process.env.NODE_ENV === "production") {
 // Routes
 //===================================
 app.use(routes);
-
 
 
 // Start the server
@@ -58,8 +54,5 @@ models.sequelize.sync(syncOptions).then(function () {
     console.log(`🌎 ==> API server now on port ${PORT}!`);
   });
 });
-
-
-
 
 module.exports = app;
