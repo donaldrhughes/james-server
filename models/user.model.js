@@ -10,13 +10,13 @@ module.exports = function (sequelize, DataTypes) {
         },
         username: {
             type: DataTypes.STRING,
-            validate: {
-                // args: [3, 12]
-                // msg: "Username must be between 3 and 12 characters in length"
-            }
         },
         salt: DataTypes.STRING,
         hash: DataTypes.STRING,
+        email_confirm_token: DataTypes.STRING,
+        email_is_confirmed: DataTypes.BOOLEAN,
+        reset_password_token: DataTypes.STRING,
+        reset_password_expires: DataTypes.STRING,
         address: DataTypes.STRING,
         zip: DataTypes.STRING,
         city: DataTypes.STRING,
@@ -27,6 +27,8 @@ module.exports = function (sequelize, DataTypes) {
         lastname: DataTypes.STRING,
         dob: DataTypes.STRING,
         userid: DataTypes.STRING,
+        btc_address: DataTypes.STRING,
+        eth_address: DataTypes.STRING,
         bio: DataTypes.STRING
     },
     {
