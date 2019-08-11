@@ -15,9 +15,10 @@ const smtpTransport = require('../../controllers/nmController');
 router.post("/register", [
     //validate required fields from registration page
     check('email', 'Email address must be formatted correctly.').not().isEmpty().isEmail().normalizeEmail(),
+    check('username', 'Username Does Not Meet Requirements').escape().matches(/(^$)|^[.a-zA-Z\s-]+$]{0,8}$/),
     //Password: min 5 char, max 24. one uppercase. one lower case. one special character. @#*!$%+=()
     check('password', 'Password does not meet the requirements.').not().isEmpty().trim().escape().matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#*!$%+=()])[0-9a-zA-Z@#*!$%+=()]{5,24}$/, "i"),
-    check('passwordVerify', 'Passwords do not match').custom((value, { req }) => (value === req.body.password)),
+    check('verifyPassword', 'Passwords do not match').custom((value, { req }) => (value === req.body.password)),
     check('dob', 'DoB requires 2 digit day and 2 digit month - use dash to separate - year is optional').not().isEmpty().trim().escape().matches(/^(?=.*[-])(?=.*[0-9])[0-9/-]{5,10}$/)
 ],
     function (req, res) {
