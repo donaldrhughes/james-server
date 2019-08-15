@@ -24,7 +24,8 @@ router.post("/register", [
     function (req, res) {
         //store user registration errors, if they exist
         const errors = validationResult(req);
-        // console.log(req.body);
+        console.log(req.body);
+        console.log(errors)
 
         //if there are reg errors send them back to the client
         if (!errors.isEmpty()) {
