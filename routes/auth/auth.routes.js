@@ -32,7 +32,7 @@ router.post("/register", [
             // console.log(errors);
 
             const hasError = true;
-            return res.jsonp({ e: errors.array(), hasE: hasError });
+            return res.jsonp({ e: errors.array({ onlyFirstError: true }), hasE: hasError });
 
             //if no reg errors create the user account
         } else {
@@ -90,7 +90,7 @@ router.post("/register", [
 
 router.post("/login", [
     //validate required fields from registration page
-    check('email', 'Username or password is incorrect.').not().isEmpty().isEmail().normalizeEmail(),
+    check('email', 'Email is empty or not formatted correctly.').not().isEmpty().isEmail().normalizeEmail(),
     //Password: min 5 char, max 24. one uppercase. one lower case. one special character. @#*!$%+=()
     check('password', 'Username or password is incorrect.').not().isEmpty().trim().escape().matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#*!$%+=()])[0-9a-zA-Z@#*!$%+=()]{5,24}$/, "i"),
 ],
@@ -102,7 +102,7 @@ router.post("/login", [
         if (!errors.isEmpty()) {
             // console.log(errors);
             const hasError = true;
-            return res.jsonp({ e: errors.array(), hasE: hasError });
+            return res.jsonp({ e: errors.array({ onlyFirstError: true }), hasE: hasError });
 
             //if no reg errors log user in
         } else {
@@ -133,7 +133,7 @@ router.post("/login", [
                     }
                 })
                 .catch(function (err) {
-                    res.json({ message: err });
+                    return res.json({ message: err });
 
                 })
         }
@@ -152,7 +152,7 @@ router.post('/forgot_password', [
         if (!errors.isEmpty()) {
             // console.log(errors);
             const hasError = true;
-            return res.jsonp({ e: errors.array(), hasE: hasError });
+            return res.jsonp({ e: errors.array({ onlyFirstError: true }), hasE: hasError });
 
             //if no errors send password reset
         } else {
@@ -242,7 +242,7 @@ router.post('/reset_password', [
         if (!errors.isEmpty()) {
             // console.log(errors);
             const hasError = true;
-            return res.jsonp({ e: errors.array(), hasE: hasError });
+            return res.jsonp({ e: errors.array({ onlyFirstError: true }), hasE: hasError });
 
             //if no reg errors start password reset
         } else {

@@ -45,7 +45,7 @@ router.post("/updateuser", [
       // console.log(errors);
 
       const hasError = true;
-      return res.jsonp({ e: errors.array(), hasE: hasError });
+      return res.jsonp({ e: errors.array({ onlyFirstError: true }), hasE: hasError });
 
       //if no reg errors create the user account
     } else {
