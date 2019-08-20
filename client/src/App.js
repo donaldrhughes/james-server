@@ -11,6 +11,7 @@ import { PrivateRoute } from './components/PrivateRoute/index'
 //Import pages
 import Home from "./pages/Home/home";
 import Register from "./pages/Register/register";
+import Forgot from "./pages/Forgot";
 // import About from "./pages/About/About";
 import Splash from "./pages/Splash/splash"
 import Profile from "./pages/Profile/Profile"
@@ -39,6 +40,7 @@ export default class App extends Component {
             {/* <Route exact path="/about" component={About} /> */}
             {/* <PrivateRoute exact path="/chat" component={Chat} /> */}
             <Route exact path="/register" component={Register} />
+            <Route exact path="/forgot" component={Forgot} />
             <PrivateRoute exact path="/splash" component={Splash} />
             <PrivateRoute exact path="/profile" component={Profile} />
 

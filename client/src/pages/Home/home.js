@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import { Container, Row, Col, Jumbotron, Card } from "react-bootstrap";
-import Background from "../../images/bkgrnd-mod.png";
+import Background from "../../images/new-bk.png";
 import Login from "../../components/Login/index";
 import Logo from "../../images/JA-Logo-sml.png";
 import JA from "../../images/JA-script-logo-trans.png"
@@ -34,7 +34,7 @@ class Home extends Component {
                         <Col><Card><img src={Logo} alt="Logo"></img></Card></Col>
                         <Col />
                     </Row>
-                    <Jumbotron className="jumbo">
+                    {/* <Jumbotron className="jumbo">
                         <Row>
 
                             <Col />
@@ -44,7 +44,7 @@ class Home extends Component {
                             <Col />
 
                         </Row>
-                    </Jumbotron>
+                    </Jumbotron> */}
                     <Row>
                         <Col />
                         <Col-6></Col-6>

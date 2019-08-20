@@ -5,7 +5,7 @@ import axios from 'axios';
 import { withRouter, Link } from 'react-router-dom';
 
 
-class Login extends Component {
+class ForgotPass extends Component {
   constructor(props) {
     super(props);
 
@@ -33,17 +33,17 @@ class Login extends Component {
   handleSubmit = event => {
     event.preventDefault();
     //add axios here to auth/login
-    axios.post("/auth/login", {
-      email: this.state.email,
-      password: this.state.password,
+    axios.post("/auth/forgot_password", {
+      email: this.state.email
+      
 
     })
       .then((response) => {
         const token = response.data.token;
-        localStorage.setItem("token", token)
+        // localStorage.setItem("token", token)
 
         // console.log(token)
-        this.props.history.push('/splash');
+        this.props.history.push('/');
       })
       .catch(function (error) {
         console.log(error);
@@ -67,30 +67,14 @@ class Login extends Component {
                   onChange={this.handleChange}
                 />
               </FormGroup>
-              <FormGroup controlId="password" >
-                <div className="pfont">Password</div>
-                <FormControl
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                  type="password"
-                />
-              </FormGroup>
+              
                 <input align="center" className="submit btn" type="submit" value="Submit" />
             </form>  
-              <Link to="/register">
-                <Button className="regBtn" type="submit">
-                  Register
-              </Button>
-              </Link>
-              <Link to="/forgot">
-                <Button className="regBtn" type="submit">
-                  Forgot Password
-              </Button>
-              </Link>
+              
         </Card>
   
     );
   }
 }
 
-export default withRouter(Login);
+export default withRouter(ForgotPass);
