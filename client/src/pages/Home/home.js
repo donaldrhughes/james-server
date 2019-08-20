@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
-import Background from "../../images/Zilchwelcome.jpg"
+import { Container, Row, Col, Jumbotron } from "react-bootstrap";
+// import Background from "../../images/Zilchwelcome.jpg"
 import Login from "../../components/Login/index";
-// import Logo from "../../images/welcome_logo.png";
+import Logo from "../../images/JA-Logo-sml.png";
 // import { Button, FormGroup, FormControl } from "react-bootstrap";
 import "../home.css";
 
@@ -11,8 +11,8 @@ import "../home.css";
 
 var sectionStyle = {
     width: "800px",
-    height: "600px",
-    backgroundImage: "url(" + Background + ")"
+    height: "600px"
+    // ,backgroundImage: "url(" + Background + ")"
 };
 
 class Home extends Component {
@@ -34,27 +34,25 @@ class Home extends Component {
                         <Container>
                             <Row>
                                 <Col />
-                                {/* <Col><img src={Logo} alt="Logo"></img></Col> */}
+                                <Col><img src={Logo} alt="Logo"></img></Col>
                                 <Col />
                             </Row>
+                            <Jumbotron className="jumbo">
+                                <Row>
+
+                                    <Col />
+
+                                    <Col-6>
+
+                                    </Col-6>
+
+                                    <Col />
+
+                                </Row></Jumbotron>
 
                             <Row>
                                 <Col />
-
-                                <Col-6>
-                                    <div className="Header">
-                                        Welcome To James Albert Cosmetics!
-                                    </div>
-                                </Col-6>
-
-                                <Col />
-                            </Row>
-
-                            <Row>
-                                <Col />
-                                <Col-6><div className="PleaseLogin">
-                                       Please Login!
-                                    </div></Col-6>
+                                <Col-6></Col-6>
                                 <Col />
                             </Row>
 
@@ -68,7 +66,7 @@ class Home extends Component {
                     </div>
                 </section>
             </div>
-           
+
         );
     }
 }

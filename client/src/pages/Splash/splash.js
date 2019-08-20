@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import Background from "../../images/Zilchwelcome.jpg"
+// import Background from "../../images/Zilchwelcome.jpg"
 import Lobby from "../../components/Lobby/index";
-// import Logo from "../../images/welcome_logo.png";
+import Logo from "../../images/JA-Logo-sml.png";
 // import { Button, FormGroup, FormControl } from "react-bootstrap";
 import "../home.css";
 import privateHelpers from '../../components/PrivateRoute/helpers/private.helper'
@@ -12,7 +12,7 @@ import privateHelpers from '../../components/PrivateRoute/helpers/private.helper
 var sectionStyle = {
     width: "800px",
     height: "600px",
-    backgroundImage: "url(" + Background + ")"
+    // backgroundImage: "url(" + Background + ")"
 };
 
 class Home extends Component {
@@ -40,7 +40,7 @@ class Home extends Component {
                         <Container>
                             <Row>
                                 <Col />
-                                {/* <Col><img src={Logo} alt="Logo"></img></Col> */}
+                                <Col><img src={Logo} alt="Logo"></img></Col>
                                 <Col />
                             </Row>
 
