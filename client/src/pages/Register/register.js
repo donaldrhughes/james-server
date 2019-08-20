@@ -1,20 +1,16 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-// import Background from "../../images/Zilchwelcome.jpg"
-// import Logo from "../../images/welcome_logo.png";
 import Logo from "../../images/JA-Logo-sml.png";
-// import { Button, FormGroup, FormControl } from "react-bootstrap";
 import Registration from "../../components/Registration/index";
 import "../home.css";
+// import { Link } from "react-router-dom";
 
 
-
-var sectionStyle = {
+const sectionStyle = {
     width: "800px",
     height: "600px",
     // backgroundImage: "url(" + Background + ")"
-  };
+};
 
 class Register extends Component {
     state = {
@@ -27,28 +23,23 @@ class Register extends Component {
 
     render() {
         return (
-            <div>
-                <section style={ sectionStyle }>
-      
-                <div>
-                    
+            <section style={sectionStyle}>
                 <Container>
-                        <Row>
-                            <Col />
-                            <Col><img src={Logo} alt="Logo"></img></Col>
-                            <Col />
-                        </Row>
-                        <Row>
-                            <Col />
-                            <Col-6><div className="Header">Sign Up For James Albert!</div></Col-6>
-                            <Col />
-                        </Row>
-                        <Row>
+                    <Row>
+                        <Col />
+                        <Col><img src={Logo} alt="Logo"></img></Col>
+                        <Col />
+                    </Row>
+                    <Row>
+                        <Col />
+                        <Col-6><div className="Header">Sign Up For James Albert!</div></Col-6>
+                        <Col />
+                    </Row>
+                    <Row>
                         <Col><Registration /></Col>
-                            </Row>
-                    </Container>;
-                </div></section>
-            </div>
+                    </Row>
+                </Container>;
+                </section>
         );
     }
 }

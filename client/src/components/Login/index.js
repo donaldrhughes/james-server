@@ -56,13 +56,10 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-        <Card className="Card">
-          <div className="LoginText">
-
+        <Card className="Card LoginText">
             <form onSubmit={this.handleSubmit}>
               <FormGroup controlId="email">
-                <div><p className="pfont">Email</p></div>
+                <div className="pfont">Email</div>
                 <FormControl
                   // autoFocus
                   type="email"
@@ -71,33 +68,22 @@ class Login extends Component {
                 />
               </FormGroup>
               <FormGroup controlId="password" >
-                <div><p className="pfont">Password</p></div>
+                <div className="pfont">Password</div>
                 <FormControl
                   value={this.state.password}
                   onChange={this.handleChange}
                   type="password"
                 />
               </FormGroup>
-
-              <div align="center">
-                <input className="submit btn" type="submit" value="Submit" />
-              </div>
-            </form>
-
-
-            <div className="RegisterBtn">
+                <input align="center" className="submit btn" type="submit" value="Submit" />
+            </form>  
               <Link to="/register">
                 <Button className="regBtn" type="submit">
                   Register here
               </Button>
               </Link>
-
-
-
-            </div>
-          </div>
         </Card>
-      </div>
+  
     );
   }
 }
