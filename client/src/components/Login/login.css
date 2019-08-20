@@ -8,7 +8,14 @@
     .pfont {
       color: #ffffff
     }
-  
+    .regBtn {
+      background-color: rgb(91, 8, 91)
+      
+    }
+    .subBtn {
+      background-color: rgb(26, 26, 152)
+      
+    }
     .Login form {
       color:black;
       max-width: 320px;
@@ -46,12 +53,12 @@
   .submit {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    background-color: blue;
+    background-color: black;
     color:white;
   }
   
   .submit:hover {
-    background-color: black; 
+    background-color: blue; 
     color: white;
   }
   

@@ -80,14 +80,14 @@ class Login extends Component {
               </FormGroup>
 
               <div align="center">
-                <input className="submit btn btn-outline-secondary" type="submit" value="Submit" />
+                <input className="submit btn" type="submit" value="Submit" />
               </div>
             </form>
 
 
             <div className="RegisterBtn">
               <Link to="/register">
-                <Button type="submit">
+                <Button className="regBtn" type="submit">
                   Register here
               </Button>
               </Link>
