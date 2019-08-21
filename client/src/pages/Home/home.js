@@ -4,17 +4,19 @@ import { Container, Row, Col, Jumbotron, Card } from "react-bootstrap";
 import Background from "../../images/new-bk.png";
 import Login from "../../components/Login/index";
 import Logo from "../../images/JA-Logo-sml.png";
-import JA from "../../images/JA-script-logo-trans.png"
 // import { Button, FormGroup, FormControl } from "react-bootstrap";
 import "../home.css";
+import Footer from "../../common/footer"
 
 
 
 var sectionStyle = {
     width: "800px",
-    height: "600px"
+    height: "840px"
     , backgroundImage: "url(" + Background + ")"
 };
+
+
 
 class Home extends Component {
     state = {
@@ -35,15 +37,7 @@ class Home extends Component {
                         <Col />
                     </Row>
                     {/* <Jumbotron className="jumbo">
-                        <Row>
-
-                            <Col />
-
-                            <Col-6></Col-6>
-
-                            <Col />
-
-                        </Row>
+                     
                     </Jumbotron> */}
                     <Row>
                         <Col />
@@ -58,8 +52,10 @@ class Home extends Component {
                     <Row>
                         <Col />
                         <Col></Col>
-                        <Col /><img src={JA} alt="JA"></img>
+                        <Col />
                     </Row>
+                    
+                    <Footer />
                 </Container>;
             </section>
         );

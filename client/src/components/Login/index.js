@@ -83,7 +83,7 @@ class Login extends Component {
               </Button>
               </Link>
               <Link to="/forgot">
-                <Button className="regBtn" type="submit">
+                <Button className="forgotBtn" type="submit">
                   Forgot Password
               </Button>
               </Link>
