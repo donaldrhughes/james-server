@@ -10,7 +10,7 @@ const url = require('../../config/url')
 
 //GET
 router.get('/server/port', function (req, res) {
-  res.send({port: process.env.port, url: url.production})
+  res.send({port: process.env.port, url: url.url})
   // console.log(process.env.port)
 })
 
