@@ -5,10 +5,12 @@ const express = require("express");
 const router = express.Router();
 const models = require("../../models");
 const { check, validationResult } = require('express-validator');
+const url = require('../../config/url')
+
 
 //GET
 router.get('/server/port', function (req, res) {
-  res.send(process.env.port)
+  res.send({port: process.env.port, url: url.production})
   // console.log(process.env.port)
 })
 
