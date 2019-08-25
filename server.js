@@ -5,6 +5,7 @@ const express = require("express");
 const jwt = require('express-jwt');
 const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 3001;
+process.env.port = PORT;
 const app = express();
 const models = require("./models");
 const routes = require("./routes");

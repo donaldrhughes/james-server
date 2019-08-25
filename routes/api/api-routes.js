@@ -7,6 +7,11 @@ const models = require("../../models");
 const { check, validationResult } = require('express-validator');
 
 //GET
+router.get('/server/port', function (req, res) {
+  res.send(process.env.port)
+  // console.log(process.env.port)
+})
+
 router.post("/user", function (req, res) {
   // console.log(req.body.email)
 
