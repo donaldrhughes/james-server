@@ -19,8 +19,11 @@ const authenticationHelpers = {
     checkIfValidPass(user, password) {
         var unvalidatedHash = authenticationHelpers.getHash(user.salt, password);
         return unvalidatedHash === user.hash;
+    },
+    forgotpassToken() {
+        //possibly change to int -- use crypto documentation
+        return crypto.randomBytes(20).toString('hex');
     }
-    
 }
 
 module.exports = authenticationHelpers;

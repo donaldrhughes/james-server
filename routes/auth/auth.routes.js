@@ -188,7 +188,6 @@ router.post('/forgot_password', [
                     //generate the forgot user token
                     const token = helpers.forgotpassToken()
                     //console.log(token, user.email);
-
                     //update the new token and expiration to the user record in db
                     models.User.update({
                         reset_password_token: token,
@@ -207,7 +206,7 @@ router.post('/forgot_password', [
                         to: user.email,
                         from: emailer,
                         subject: 'Password help has arrived!',
-                        html: '<b>Password Reset Link</b><br><br><a href="http://localhost:3000/new-pass?token=' + token + '&forgotemail=' + user.email + '">Link to Reset</a>',
+                        html: '<b>Password Reset Link</b><br><br><a href="http://localhost:3000/new-pass?token=' + token + '&forgotemail=' + user.email + '">Link to Reset</a><b>Password Reset Link</b><br><br><a href="cosmetics://new-pass?token=' + token + '&forgotemail=' + user.email + '">App Link to Reset</a>',
                     }
 
                     //method to send email to the forgot user
