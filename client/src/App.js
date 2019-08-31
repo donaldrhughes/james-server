@@ -1,6 +1,7 @@
-//React Router Main
-//==========================================
-//!Keep this page as lean as possible for fast loading...
+//James Albert Cosmetics - React Router Main
+//All Rights Reserved. Copyright 2019 - James Albert
+//=====================================================
+//!Keep this page as lean as possible
 import React, { Component, Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -12,6 +13,7 @@ import { PrivateRoute } from './components/PrivateRoute/index'
 import Home from "./pages/Home/home";
 import Register from "./pages/Register/register";
 import Forgot from "./pages/Forgot";
+import Reset from "./pages/Reset";
 // import About from "./pages/About/About";
 import Splash from "./pages/Splash/splash"
 import Profile from "./pages/Profile/Profile"
@@ -41,6 +43,7 @@ export default class App extends Component {
             {/* <PrivateRoute exact path="/chat" component={Chat} /> */}
             <Route exact path="/register" component={Register} />
             <Route exact path="/forgot" component={Forgot} />
+            <Route exact path="/reset" component={Reset} />
             <PrivateRoute exact path="/splash" component={Splash} />
             <PrivateRoute exact path="/profile" component={Profile} />
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Logo from "../../images/JA-Logo-sml.png";
-import ForgotPass from "../../components/ForgotPass/index";
+import ResetPass from "../../components/ResetPass/index";
 import "../home.css";
 // import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const sectionStyle = {
     // backgroundImage: "url(" + Background + ")"
 };
 
-class Register extends Component {
+class Reset extends Component {
     state = {
         text: ""
     };
@@ -32,11 +32,11 @@ class Register extends Component {
                     </Row>
                     <Row>
                         <Col />
-                        <Col-6><div className="Header">Forgot Password</div></Col-6>
+                        <Col-6><div className="Header">Reset Pass</div></Col-6>
                         <Col />
                     </Row>
                     <Row>
-                        <Col><ForgotPass /></Col>
+                        <Col><ResetPass /></Col>
                     </Row>
                 </Container>;
                 </section>
@@ -44,4 +44,4 @@ class Register extends Component {
     }
 }
 
-export default Register;
+export default Reset;

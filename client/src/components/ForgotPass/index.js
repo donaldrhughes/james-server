@@ -41,9 +41,10 @@ class ForgotPass extends Component {
       .then((response) => {
         const token = response.data.token;
         // localStorage.setItem("token", token)
-
+        let message = response.data.message; 
         // console.log(token)
         this.props.history.push('/');
+        alert(message)
       })
       .catch(function (error) {
         console.log(error);
@@ -59,12 +60,14 @@ class ForgotPass extends Component {
         <Card className="Card LoginText">
             <form onSubmit={this.handleSubmit}>
               <FormGroup controlId="email">
-                <div className="pfont">Email</div>
+                <div className="pfont">Enter Your Email</div>
                 <FormControl
                   // autoFocus
                   type="email"
                   value={this.state.email}
                   onChange={this.handleChange}
+                  placeholder="Email to Reset..."
+                margin="normal"
                 />
               </FormGroup>
               

@@ -15,15 +15,16 @@ const smtpTransport = require('../../controllers/nmController');
 router.post("/register", [
     //validate required fields from registration page
     check('email', 'Email address must be formatted correctly.').not().isEmpty().isEmail().normalizeEmail(),
-    check('username', 'Username Does Not Meet Requirements').escape().matches(/(^$)|^[.0-9a-zA-Z\s-]+$]{0,8}$/),
-    //Password: min 5 char, max 24. one uppercase. one lower case. one special character. @#*!$%+=()
-    check('password', 'Password does not meet the requirements.').not().isEmpty().trim().escape().matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#*!$%+=()])[0-9a-zA-Z@#*!$%+=()]{5,24}$/, "i"),
-    check('verifyPassword', 'Passwords do not match').custom((value, { req }) => (value === req.body.password)),
-    check('dob', 'DoB requires 2 digit day and 2 digit month - use dash to separate - year is optional').not().isEmpty().trim().escape().matches(/^(?=.*[-])(?=.*[0-9])[0-9/-]{5,10}$/)
+    // check('username', 'Username Does Not Meet Requirements').escape().matches(/(^$)|^[.0-9a-zA-Z\s-]+$]{0,8}$/),
+    // //Password: min 5 char, max 24. one uppercase. one lower case. one special character. @#*!$%+=()
+    // check('password', 'Password does not meet the requirements.').not().isEmpty().trim().escape().matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#*!$%+=()])[0-9a-zA-Z@#*!$%+=()]{5,24}$/, "i"),
+    // check('verifyPassword', 'Passwords do not match').custom((value, { req }) => (value === req.body.password)),
+    // check('dob', 'DoB requires 2 digit day and 2 digit month - use dash to separate - year is optional').not().isEmpty().trim().escape().matches(/^(?=.*[-])(?=.*[0-9])[0-9/-]{5,10}$/)
 ],
     function (req, res) {
         //store user registration errors, if they exist
         const errors = validationResult(req);
+        const email = req.body.email
         console.log(req.body);
         console.log(errors)
 
@@ -41,11 +42,12 @@ router.post("/register", [
 
             models.User.findOne({
                 where: {
-                    email: req.body.email
+                    email: email
                 }
             })
                 .then(function (resp) {
                     //if email doesn't exist, create
+                    // console.log(resp.email);
                     if (resp === null) {
 
                         //generate the userid
@@ -74,11 +76,11 @@ router.post("/register", [
 
                             })
                             .catch(function (err) {
-                                return res.json({ message: 'General creation error: Cannot create user.' });
+                                res.json({ message: 'General creation error: Cannot create user.' });
                             })
 
                     } else {
-                        return res.json({ message: 'Account exists. Use forgot password link to reset.' });
+                        res.json({ message: 'Account exists. Use forgot password link to reset.' });
 
                     }
 
@@ -213,10 +215,10 @@ router.post('/forgot_password', [
                     smtpTransport.sendMail(data, function (err) {
                         //if no issues, send link
                         if (!err) {
-                            return res.json({ message: 'A reset password link has been sent to your email address. The link will be good for 24 hours.' });
+                            res.json({ message: 'A reset password link has been sent to your email address. The link will be good for 24 hours.' });
                             //otherwise send back an error message
                         } else {
-                            return res.json({ message: err });
+                            res.json({ message: err });
                         }
                     });
 

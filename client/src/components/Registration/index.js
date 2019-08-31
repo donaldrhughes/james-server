@@ -38,9 +38,9 @@ class Registration extends React.Component {
       })
         .then((response) => {
       console.log(response);
-
+          let message = response.data.message;
       this.props.history.push('/');
-       alert("You are ready to play!")
+       alert(message)
     })
       .catch(function (error) {
         console.log(error);
