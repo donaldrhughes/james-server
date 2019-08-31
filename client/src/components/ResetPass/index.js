@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, Card } from "react-bootstrap";
+import { FormGroup, FormControl } from "react-bootstrap";
 import "./login.css";
 import axios from 'axios';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Loader from '../Loader/Loader'
 
 

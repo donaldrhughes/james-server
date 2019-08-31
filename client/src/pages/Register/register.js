@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Logo from "../../images/JA-Logo-sml.png";
 import Registration from "../../components/Registration/index";
+import Background from "../../images/new-bk.png";
 import "../home.css";
 // import { Link } from "react-router-dom";
 
 
 const sectionStyle = {
-    width: "800px",
+    width: "100%",
     height: "600px",
-    // backgroundImage: "url(" + Background + ")"
+    backgroundImage: "url(" + Background + ")"
 };
 
 class Register extends Component {

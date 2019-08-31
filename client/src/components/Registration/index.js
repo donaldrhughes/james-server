@@ -1,8 +1,9 @@
 import React from 'react';
 import axios from "axios";
 import { withRouter } from "react-router-dom";
-import "./register.css";
 import { FormGroup, FormControl } from "react-bootstrap";
+import "./register.css";
+
 
 class Registration extends React.Component {
   constructor(props) {

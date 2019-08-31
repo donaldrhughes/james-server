@@ -1,6 +1,7 @@
 //James Albert Cosmetics - React Router Main
 //All Rights Reserved. Copyright 2019 - James Albert
 //=====================================================
+
 //!Keep this page as lean as possible
 import React, { Component, Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";

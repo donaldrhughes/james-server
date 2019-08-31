@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+//Footer
+//==============
+import React from 'react';
 import JA from "../images/JA-script-logo-trans.png"
-import { Container, Row, Col, Jumbotron, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Android from "../images/android.png"
 import IOS from "../images/ios.png"
 
@@ -13,7 +15,7 @@ var footerStyle = {
     left: "0",
     bottom: "0",
     height: "90px",
-    width: "800px",
+    width: "100%",
 }
 
 var phantom = {
@@ -23,9 +25,8 @@ var phantom = {
   width: '800px',
 }
 
+//Functional Footer
 function Footer ( {children}){
-
-  
         return (<div>
             <div style={phantom} />
             <div style={footerStyle}>

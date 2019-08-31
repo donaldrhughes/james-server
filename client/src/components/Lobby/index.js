@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { Button, FormGroup, FormControl } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "./lobby.css";
 import axios from 'axios';
 // import { Link } from 'react-router-dom';
@@ -23,8 +23,10 @@ class Lobby extends Component {
   render() {
     return (
       <div>
+        <Container>
+          <p> Welcome, {this.props.tokenData.username}.</p>
+        </Container>
         
-        <p> {this.props.tokenData.username} wants to join</p>
       </div>
     );
   }
