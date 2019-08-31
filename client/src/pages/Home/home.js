@@ -11,9 +11,14 @@ import Footer from "../../common/footer"
 
 
 var sectionStyle = {
-    width: "800px",
+    width: "100%",
     height: "840px"
-    , backgroundImage: "url(" + Background + ")"
+    , background: "url(" + Background + ")no-repeat center center fixed",
+    // backgroundRepeat: " ",
+    webkitBackgroundSize: "cover",
+  mozBackgroundSize: "cover",
+//   -obackground-size: cover
+    backgroundSize: "cover"
 };
 
 
