@@ -79,7 +79,7 @@ class Login extends Component {
             </form>  
               <Link to="/register">
                 <Button className="regBtn" type="submit">
-                  Register
+                  Join
               </Button>
               </Link>
               <Link to="/forgot">
