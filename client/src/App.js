@@ -11,48 +11,38 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { PrivateRoute } from './components/PrivateRoute/index'
 
 //Import pages
-import Home from "./pages/Home/home";
-import Register from "./pages/Register/register";
+import Home from "./pages/Home/Home";
+import Register from "./pages/Register/Register";
 import Forgot from "./pages/Forgot";
 import Reset from "./pages/Reset";
-// import About from "./pages/About/About";
-import Splash from "./pages/Splash/splash"
+import Splash from "./pages/Splash/Splash"
 import Profile from "./pages/Profile/Profile"
+// import About from "./pages/About/About";
+
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       value: ""
-  
-  };
+    };
   }
-
 
   render() {
     return (
-      <div>
-       
         <Fragment>
-        
-        <Router>
-        {/* <Nav /> */}
-          <Switch>
-          <Route exact path="/" component={Home} />
-            
-            {/* <Route exact path="/about" component={About} /> */}
-            {/* <PrivateRoute exact path="/chat" component={Chat} /> */}
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/forgot" component={Forgot} />
-            <Route exact path="/reset" component={Reset} />
-            <PrivateRoute exact path="/splash" component={Splash} />
-            <PrivateRoute exact path="/profile" component={Profile} />
-
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              {/* <Route exact path="/about" component={About} /> */}
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/forgot" component={Forgot} />
+              <Route exact path="/reset" component={Reset} />
+              <PrivateRoute exact path="/splash" component={Splash} />
+              <PrivateRoute exact path="/profile" component={Profile} />
             </Switch>
-      </Router>
-      </Fragment>
-      </div>
+          </Router>
+        </Fragment>
     );
   }
-
 }

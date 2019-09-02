@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom'
-import axios from "axios";
-import "./register.css";
 import { FormGroup, FormControl } from "react-bootstrap";
+import axios from "axios";
+import "./style.css";
 
 
 class UpdateUser extends React.Component {
@@ -18,16 +18,13 @@ class UpdateUser extends React.Component {
       lastName: "",
       phone: "",
       bio: ""
-     
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
   componentWillMount() {
     this.getUser()
-
 }
 
   handleChange = event => {
@@ -55,14 +52,12 @@ class UpdateUser extends React.Component {
             this.setState({ firstName: response.data.firstname });
             this.setState({ lastName: response.data.lastname });
             this.setState({ bio: response.data.bio });
-      
             // console.log(this.state)
         }
         )
 }
 
   handleSubmit = event => {
-
     event.preventDefault();
     const profileObj = {
       email: this.props.tokenData.email,
@@ -83,7 +78,6 @@ class UpdateUser extends React.Component {
           email: this.props.tokenData.email
         })
           .then((response) => {
-
             // console.log(response.data);
             this.setState({ phone: response.data.phone_number });
             this.setState({ address: response.data.address });
@@ -93,10 +87,8 @@ class UpdateUser extends React.Component {
             this.setState({ firstName: response.data.firstname });
             this.setState({ lastName: response.data.lastname });
             this.setState({ bio: response.data.bio });
-            
         alert("Your profile has been updated!")
           })
-
         })
       .catch(function (error) {
         console.log(error);
@@ -106,7 +98,6 @@ class UpdateUser extends React.Component {
   render() {
     return (
       <div>
-      
                 <br></br>
                 <h3>Username: {this.state.username} </h3>
                 <br></br>
@@ -130,14 +121,10 @@ class UpdateUser extends React.Component {
                 <br></br>
                 <h3> User Bio: {this.state.bio}</h3>
                 <br></br>
-
-
         <div className="#" align="center">
           Update your profile here:
           <form onSubmit={this.handleSubmit}>
-
             <FormGroup>
-
               <FormControl
                 id="address"
                 label="address"
@@ -146,10 +133,8 @@ class UpdateUser extends React.Component {
                 onChange={this.handleChange}
                 autoComplete="address"
                 placeholder="address"
-                margin="normal"
-              />
+                margin="normal"/>
             </FormGroup>
-
             <FormGroup>
               <FormControl
                 id="city"
@@ -162,7 +147,6 @@ class UpdateUser extends React.Component {
                 margin="normal"
               />
             </FormGroup>
-
             <FormGroup>
               <FormControl
                 id="state"
@@ -172,8 +156,7 @@ class UpdateUser extends React.Component {
                 onChange={this.handleChange}
                 autoComplete="mm-dd-yy"
                 placeholder="state"
-                margin="normal"
-              />
+                margin="normal"/>
             </FormGroup>
             <FormGroup>
               <FormControl
@@ -184,8 +167,7 @@ class UpdateUser extends React.Component {
                 onChange={this.handleChange}
                 autoComplete="zip"
                 placeholder="zip"
-                margin="normal"
-              />
+                margin="normal"/>
             </FormGroup>
             <FormGroup>
               <FormControl
@@ -196,8 +178,7 @@ class UpdateUser extends React.Component {
                 onChange={this.handleChange}
                 autoComplete="firstName"
                 placeholder="firstName"
-                margin="normal"
-              />
+                margin="normal"/>
             </FormGroup>
             <FormGroup>
               <FormControl
@@ -208,8 +189,7 @@ class UpdateUser extends React.Component {
                 onChange={this.handleChange}
                 autoComplete="lastName"
                 placeholder="lastName"
-                margin="normal"
-              />
+                margin="normal"/>
             </FormGroup>
             <FormGroup>
               <FormControl
@@ -220,11 +200,9 @@ class UpdateUser extends React.Component {
                 onChange={this.handleChange}
                 autoComplete="phone"
                 placeholder="phone"
-                margin="normal"
-              />
+                margin="normal"/>
             </FormGroup>
             <h6> Here you can enter some information about yourself like an autobiography.  </h6>
-               
             <FormGroup>
               <FormControl
                 id="bio"
@@ -234,8 +212,7 @@ class UpdateUser extends React.Component {
                 onChange={this.handleChange}
                 autoComplete="bio"
                 placeholder="bio"
-                margin="normal"
-              />
+                margin="normal"/>
             </FormGroup>
             <input className="submit btn btn-outline-secondary" type="submit" value="Update Profile" />
           </form>
