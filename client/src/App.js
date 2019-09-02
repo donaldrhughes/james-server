@@ -11,11 +11,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { PrivateRoute } from './components/PrivateRoute/index'
 
 //Import pages
-import Home from "./pages/Home/Home";
-import Register from "./pages/Register/Register";
+import Home from "./pages/Home/home";
+import Register from "./pages/Register/register";
 import Forgot from "./pages/Forgot";
 import Reset from "./pages/Reset";
-import Splash from "./pages/Splash/Splash"
+import Splash from "./pages/Splash/splash"
 import Profile from "./pages/Profile/Profile"
 // import About from "./pages/About/About";
 
