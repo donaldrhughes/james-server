@@ -41,16 +41,12 @@ class Login extends Component {
       .then((response) => {
         const token = response.data.token;
         localStorage.setItem("token", token)
-
         // console.log(token)
         this.props.history.push('/splash');
       })
       .catch(function (error) {
         console.log(error);
-
       });
-
-
   }
 
 
@@ -64,16 +60,14 @@ class Login extends Component {
                   // autoFocus
                   type="email"
                   value={this.state.email}
-                  onChange={this.handleChange}
-                />
+                  onChange={this.handleChange}/>
               </FormGroup>
               <FormGroup controlId="password" >
                 <div className="pfont">Password</div>
                 <FormControl
                   value={this.state.password}
                   onChange={this.handleChange}
-                  type="password"
-                />
+                  type="password"/>
               </FormGroup>
                 <input align="center" className="submit btn" type="submit" value="Submit" />
             </form>  
@@ -88,7 +82,6 @@ class Login extends Component {
               </Button>
               </Link>
         </Card>
-  
     );
   }
 }

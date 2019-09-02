@@ -1,39 +1,25 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
-import Background from "../../images/new-bk.png";
+import { Row, Col, Card } from "react-bootstrap";
 import Logo from "../../images/JA-Logo-sml.png";
-import "../home.css";
+import '../../app.css'
+import "./style.css";
 
 
 //Components
-import Footer from "../../common/footer"
+// import Footer from "../../components/common/Footer/Footer"
 import Login from "../../components/Login/index";
 
-//Styles
-var sectionStyle = {
-    width: "100%",
-    height: "840px"
-    , background: "url(" + Background + ")",
-    // backgroundRepeat: " ",
-    webkitBackgroundSize: "cover",
-    mozBackgroundSize: "cover",
-    //   -obackground-size: cover
-    backgroundSize: "cover"
-};
 
-class Home extends Component {
-    state = {
-        text: ""
-    };
+export default class Home extends Component {
+    // state = {
+    //     text: ""
+    // };
 
-    // componentDidMount() {
-
-    // }
 
     render() {
         return (
-            <section style={sectionStyle}>
-                <Container>
+            <section className="sectionStyle">
+                <div>
                     <Row>
                         <Col />
                         <Col><Card><img src={Logo} alt="Logo"></img></Card></Col>
@@ -44,12 +30,9 @@ class Home extends Component {
                         <Col><Login /></Col>
                         <Col />
                     </Row>
-                    {/* <Footer /> */}
-                </Container>;
+                </div>
             </section>
         );
     }
 }
 
-
-export default Home;
