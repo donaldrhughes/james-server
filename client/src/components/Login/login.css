@@ -1,14 +1,10 @@
-@media all and (min-width: 480px) {
-    .LoginText {
+    .loginText {
       text-align:center;
-      color:black;
-      font-size:16px;
-    }
-    .pfont {
-      color: #000000;
+      font-size:20px;
     }
     .regBtn {
-      background-color: rgb(91, 8, 91)
+      background-color: rgb(91, 8, 91);
+      margin-top: 15%;
       
     }
     .forgotBtn{
@@ -21,14 +17,13 @@
     .subBtn:hover{
       background-color: rgb(91, 8, 91)
     }
-
+    .btn {
+      font-size:16px;
+      margin-bottom: 3%;
+    }
  
   
-  .card{
-    padding: 7px;
-    margin-top: 6px;
+  /* .card{
     background-color: #eee;
-    border: 2px solid grey;
-    color: black;
-  }
-  }
+    border: 25px solid grey;
+  } */
