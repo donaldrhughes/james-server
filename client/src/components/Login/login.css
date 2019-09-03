@@ -4,16 +4,13 @@
     }
     .regBtn {
       background-color: rgb(91, 8, 91);
-      margin-top: 15%;
+      margin-top: 25%;
       
     }
     .forgotBtn{
       background-color: black
     }
-    .subBtn {
-      background-color: rgb(26, 26, 152)
-      
-    }
+   
     .subBtn:hover{
       background-color: rgb(91, 8, 91)
     }
@@ -21,9 +18,3 @@
       font-size:16px;
       margin-bottom: 3%;
     }
- 
-  
-  /* .card{
-    background-color: #eee;
-    border: 25px solid grey;
-  } */

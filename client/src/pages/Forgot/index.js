@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
 import Logo from "../../images/JA-Logo-sml.png";
 import '../../app.css';
 import "./style.css";
@@ -14,7 +14,6 @@ export default class Register extends Component {
     // };
 
     // componentDidMount() {
-
     // }
 
     render() {
@@ -22,16 +21,18 @@ export default class Register extends Component {
             <section className="sectionStyle">
                 <Row>
                     <Col />
-                    <Col><img src={Logo} alt="Logo"></img></Col>
+                    <Col><Card><img src={Logo} alt="Logo"></img></Card></Col>
                     <Col />
                 </Row>
-                <Row>
+                {/* <Row>
                     <Col />
-                    <Col-6><div className="Header">Forgot Password</div></Col-6>
+                    <Col-6></Col-6>
                     <Col />
-                </Row>
+                </Row> */}
                 <Row>
+                    <Col></Col>
                     <Col><ForgotPass /></Col>
+                    <Col></Col>
                 </Row>
             </section>
         );

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { FormGroup, FormControl } from "react-bootstrap";
-import "./login.css";
+import { FormGroup, FormControl, Card } from "react-bootstrap";
+
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import Loader from '../Loader/Loader'
-
+import '../../app.css'
+import "./login.css";
 
 class ResetPass extends Component {
   constructor(props) {
@@ -74,12 +75,10 @@ class ResetPass extends Component {
   render() {
     if (this.state.loading) return <Loader />;
     return (
-      <div>
-        
-      <div className="forgotBoxText">
+      <Card>
+      <div className="head">Reset Pass</div>
         <form onSubmit={this.handleSubmit}>
           <FormGroup>
-
             <FormControl
               id="newpass"
               label="New Password"
@@ -88,11 +87,8 @@ class ResetPass extends Component {
               onChange={this.handleChange}
               autoComplete="newcurrent-password"
               placeholder="New Password"
-              margin="normal"
-
-            />
+              margin="normal"/>
           </FormGroup>
-
           <FormGroup>
             <FormControl
               id="newPassVerify"
@@ -102,18 +98,11 @@ class ResetPass extends Component {
               onChange={this.handleChange}
               autoComplete="current-password"
               placeholder="Confirm New Password"
-              margin="normal"
-
-            />
+              margin="normal"/>
           </FormGroup>
-
-
           <input align="center" className="submit btn btn-outline-secondary" type="submit" value="Submit" />
-
         </form>
-
-      </div>
-    </div>
+    </Card>
   );
 }
 }
