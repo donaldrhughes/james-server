@@ -2,21 +2,18 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
 import { FormGroup, FormControl, Card } from "react-bootstrap";
 import axios from 'axios';
-import "./login.css";
+import "./forgot.css";
 
 
 class ForgotPass extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       email: "",
       password: ""
     };
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
   }
 
   validateForm() {
@@ -27,7 +24,6 @@ class ForgotPass extends Component {
     this.setState({
       [event.target.id]: event.target.value
     });
-
   }
 
   handleSubmit = event => {
@@ -35,8 +31,6 @@ class ForgotPass extends Component {
     //add axios here to auth/login
     axios.post("/auth/forgot_password", {
       email: this.state.email
-      
-
     })
       .then((response) => {
         const token = response.data.token;
@@ -48,34 +42,26 @@ class ForgotPass extends Component {
       })
       .catch(function (error) {
         console.log(error);
-
       });
-
-
   }
 
 
   render() {
     return (
-        <Card className="Card LoginText">
+        <Card className="forgotText">
             <form onSubmit={this.handleSubmit}>
               <FormGroup controlId="email">
-                <div className="pfont">Enter Your Email</div>
+              <div className="head">Forgot Password</div>
                 <FormControl
-                  // autoFocus
                   type="email"
                   value={this.state.email}
                   onChange={this.handleChange}
-                  placeholder="Email to Reset..."
-                margin="normal"
-                />
+                  placeholder="Enter Your Email..."
+                  margin="normal"/>
               </FormGroup>
-              
                 <input align="center" className="submit btn" type="submit" value="Submit" />
             </form>  
-              
         </Card>
-  
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
 import Logo from "../../images/JA-Logo-sml.png";
 import "./style.css";
 
@@ -21,16 +21,18 @@ class Reset extends Component {
             <section className="sectionStyle">
                 <Row>
                     <Col />
-                    <Col><img src={Logo} alt="Logo"></img></Col>
+                    <Col><Card><img src={Logo} alt="Logo"></img></Card></Col>
                     <Col />
                 </Row>
-                <Row>
+                {/* <Row>
                     <Col />
-                    <Col-6><div className="Header">Reset Pass</div></Col-6>
+                    <Col-6></Col-6>
                     <Col />
-                </Row>
+                </Row> */}
                 <Row>
+                    <Col></Col>
                     <Col><ResetPass /></Col>
+                    <Col></Col>
                 </Row>
             </section>
         );

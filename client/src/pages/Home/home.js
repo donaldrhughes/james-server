@@ -19,7 +19,6 @@ export default class Home extends Component {
     render() {
         return (
             <section className="sectionStyle">
-                <div>
                     <Row>
                         <Col />
                         <Col><Card><img src={Logo} alt="Logo"></img></Card></Col>
@@ -30,7 +29,6 @@ export default class Home extends Component {
                         <Col><Login /></Col>
                         <Col />
                     </Row>
-                </div>
             </section>
         );
     }

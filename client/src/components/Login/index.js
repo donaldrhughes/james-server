@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, Card } from "react-bootstrap";
-import "./login.css";
-import axios from 'axios';
 import { withRouter, Link } from 'react-router-dom';
+import { Button, FormGroup, FormControl, Card } from "react-bootstrap";
+import axios from 'axios';
+import "./login.css";
 
 
 class Login extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       email: "",
       password: ""
@@ -52,18 +51,17 @@ class Login extends Component {
 
   render() {
     return (
-        <Card className="Card LoginText">
+        <Card className="loginText">
             <form onSubmit={this.handleSubmit}>
               <FormGroup controlId="email">
-                <div className="pfont">Email</div>
+                <div className="#">Email</div>
                 <FormControl
-                  // autoFocus
                   type="email"
                   value={this.state.email}
                   onChange={this.handleChange}/>
               </FormGroup>
               <FormGroup controlId="password" >
-                <div className="pfont">Password</div>
+                <div className="#">Password</div>
                 <FormControl
                   value={this.state.password}
                   onChange={this.handleChange}

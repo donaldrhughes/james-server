@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from "axios";
 import { withRouter } from "react-router-dom";
-import { FormGroup, FormControl } from "react-bootstrap";
+import { FormGroup, FormControl, Card } from "react-bootstrap";
 import "./register.css";
 
 
@@ -38,110 +38,90 @@ class Registration extends React.Component {
         dob: this.state.dob
       })
         .then((response) => {
-      console.log(response);
+          console.log(response);
           let message = response.data.message;
-      this.props.history.push('/');
-       alert(message)
-    })
-      .catch(function (error) {
-        console.log(error);
-      });
+          this.props.history.push('/');
+          alert(message)
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
 
-  } else {
+    } else {
 
-  alert("Password and Confirm Password do not match")
+      alert("Password and Confirm Password do not match")
 
-}
+    }
 
   }
 
-render() {
-  return (
-    <div>
-      <div className="registerText">Fine products.</div>
-
-      <div className="register">
-
-        <div align="center">
-        
-          <form onSubmit={this.handleSubmit}> 
-
-            <FormGroup>
-              <FormControl
-                id="email"
-                label="Email"
-                type="email"
-                value={this.state.email}
-                onChange={this.handleChange}
-                placeholder="Email"
-                margin="normal"
-              />
-            </FormGroup>
-
-
-            <FormGroup>
-              <FormControl
-                id="username"
-                label="Username"
-                type="text"
-                value={this.state.username}
-                onChange={this.handleChange}
-                placeholder="Username"
-                margin="normal"
-              />
-            </FormGroup>
-
-
-            <FormGroup>
-
-              <FormControl
-                id="password"
-                label="Password"
-                type="password"
-                value={this.state.password}
-                onChange={this.handleChange}
-                autoComplete="newcurrent-password"
-                placeholder="Password"
-                margin="normal"
-              />
-            </FormGroup>
-
-            <FormGroup>
-              <FormControl
-                id="passwordVerify"
-                label="Confirm Password"
-                type="password"
-                value={this.state.passwordVerify}
-                onChange={this.handleChange}
-                autoComplete="current-password"
-                placeholder="Confirm Password"
-                margin="normal"
-              />
-            </FormGroup>
-
-            <FormGroup>
-              <FormControl
-                id="dob"
-                label="Date of Birth"
-                type="text"
-                value={this.state.dob}
-                onChange={this.handleChange}
-                autoComplete="mm-dd-yy"
-                placeholder="Birthday (mm-dd-yy)"
-                margin="normal"
-              />
-            </FormGroup>
-        
-            <input className="submit btn btn-outline-secondary" type="submit" value="Join" />
-
-
-
-          </form>
+  render() {
+    return (
+      <Card>
+        <div className="regText">
+        <div className="registerText">Sign Up For James Albert!</div>
+          <div align="center">
+            <form onSubmit={this.handleSubmit}>
+              <FormGroup>
+                <FormControl
+                  id="email"
+                  label="Email"
+                  type="email"
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                  placeholder="Email"
+                  margin="normal" />
+              </FormGroup>
+              <FormGroup>
+                <FormControl
+                  id="username"
+                  label="Username"
+                  type="text"
+                  value={this.state.username}
+                  onChange={this.handleChange}
+                  placeholder="Username"
+                  margin="normal" />
+              </FormGroup>
+              <FormGroup>
+                <FormControl
+                  id="password"
+                  label="Password"
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                  autoComplete="newcurrent-password"
+                  placeholder="Password"
+                  margin="normal" />
+              </FormGroup>
+              <FormGroup>
+                <FormControl
+                  id="passwordVerify"
+                  label="Confirm Password"
+                  type="password"
+                  value={this.state.passwordVerify}
+                  onChange={this.handleChange}
+                  autoComplete="current-password"
+                  placeholder="Confirm Password"
+                  margin="normal" />
+              </FormGroup>
+              <FormGroup>
+                <FormControl
+                  id="dob"
+                  label="Date of Birth"
+                  type="text"
+                  value={this.state.dob}
+                  onChange={this.handleChange}
+                  autoComplete="mm-dd-yy"
+                  placeholder="Birthday (mm-dd-yy)"
+                  margin="normal" />
+              </FormGroup>
+              <input className="submit btn btn-outline-secondary" type="submit" value="Join" />
+            </form>
+          </div>
         </div>
-      </div >
-    </div >
-  );
-}
+      </Card >
+    );
+  }
 }
 
 export default withRouter(Registration);
