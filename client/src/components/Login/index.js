@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter, Link } from 'react-router-dom';
 import { Button, FormGroup, FormControl, Card } from "react-bootstrap";
+import Loader from '../Loader/Loader';
 import axios from 'axios';
 import "./login.css";
 
@@ -10,7 +11,8 @@ class Login extends Component {
     super(props);
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      loading: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -21,12 +23,12 @@ class Login extends Component {
   validateForm() {
     return this.state.email.length > 0 && this.state.password.length > 0;
   }
+  // static contextType = MainContext;
 
   handleChange = event => {
     this.setState({
       [event.target.id]: event.target.value
     });
-
   }
 
   handleSubmit = event => {
@@ -35,13 +37,29 @@ class Login extends Component {
     axios.post("/auth/login", {
       email: this.state.email,
       password: this.state.password,
-
     })
       .then((response) => {
-        const token = response.data.token;
-        localStorage.setItem("token", token)
+        this.setState({ loading: false });
+        if (response.data.hasE) {
+          const errorsJSON = JSON.parse(response.request.responseText);
+          // console.log(errorsJSON);
+          const errors = errorsJSON.e;
+          let message = '';
+          for (let i = 0; i < errors.length; i++) {
+            message += '<li>' + errors[i].msg + '</li>';
+          }
+          alert(message)
+          // this.context.updateMessage(message);
+        } else if (response.data.token) {
+          const token = response.data.token;
+          localStorage.setItem("token", token)
+          this.props.history.push('/splash');
+        } else {
+          const message = response.data.message;
+          // this.context.updateMessage(message);
+          alert(message)
+        }
         // console.log(token)
-        this.props.history.push('/splash');
       })
       .catch(function (error) {
         console.log(error);
@@ -50,22 +68,27 @@ class Login extends Component {
 
 
   render() {
+    if (this.state.loading) return <Loader />;
     return (
+      <div>
         <Card className="loginText">
             <form onSubmit={this.handleSubmit}>
               <FormGroup controlId="email">
                 <div className="#">Email</div>
                 <FormControl
                   type="email"
+                  className="loginText"
                   value={this.state.email}
-                  onChange={this.handleChange}/>
+                  onChange={this.handleChange}
+                  placeholder="Enter Password"/>
               </FormGroup>
               <FormGroup controlId="password" >
                 <div className="#">Password</div>
                 <FormControl
                   value={this.state.password}
                   onChange={this.handleChange}
-                  type="password"/>
+                  type="password"
+                  placeholder="Enter Password"/>
               </FormGroup>
                 <input align="center" className="submit btn" type="submit" value="Submit" />
             </form>  
@@ -80,6 +103,7 @@ class Login extends Component {
               </Button>
               </Link>
         </Card>
+        </div>
     );
   }
 }

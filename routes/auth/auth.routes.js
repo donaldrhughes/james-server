@@ -131,16 +131,13 @@ router.post("/login", [
                     }
                     else {
                         return res.json({ message: 'Your username or password is incorrect.' });
-
                     }
                 })
                 .catch(function (err) {
                     return res.json({ message: err });
-
                 })
         }
     })
-
 
 router.post('/forgot_password', [
     //validate required fields from forgot password page
@@ -202,7 +199,6 @@ router.post('/forgot_password', [
                 },
                 function (user, token, done, err) {
                     // console.log(token, user);
-
                     //create the email data object for the nodemailer transport
                     const data = {
                         to: user.email,
@@ -286,24 +282,19 @@ router.post('/reset_password', [
                                         reset_password_token: forgotToken
                                     }
                                 }).then(function () {
-
                                     return res.json({
                                         message: 'Your token has expired.'
-
                                     })
                                 })
                         }
                         // console.log(user)
-
                         //validates the forgot token and new password exist and no errors
                         if (!err && forgotToken && newPass && time < user.reset_password_expires) {
                             //set the response to user var
                             user = user.dataValues;
                             // console.log(user)
-
                             //create a new hash using the existing users salt
                             const newhash = helpers.getHash(user.salt, newPass);
-
                             //update new hash and remove the existing token and expiration
                             models.User.update({
                                 hash: newhash,
@@ -325,15 +316,12 @@ router.post('/reset_password', [
                                 subject: 'Password Reset Confirmation',
                                 html: 'Your Tournament Zilch password has been reset.'
                             }
-
                             //send the password reset confirmation email
                             smtpTransport.sendMail(data, function (err) {
                                 if (!err) {
-
                                     return res.json({
                                         message: 'Your password has been reset.'
                                     });
-
                                 } else {
                                     return res.json({
                                         message: 'An error was returned during email confirmation.'
@@ -342,17 +330,13 @@ router.post('/reset_password', [
                             })
                         }
                     })
-
                 //make sure all info is in the URL
             } else {
                 return res.json({
                     message: 'Required submission info missing.'
                 });
             }
-
-
         }
     })
-
 
 module.exports = router;
