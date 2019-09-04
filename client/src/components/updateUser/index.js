@@ -97,6 +97,7 @@ class UpdateUser extends React.Component {
 
   render() {
     return (
+      //add card
       <div>
                 <br></br>
                 <h3>Username: {this.state.username} </h3>
@@ -105,7 +106,7 @@ class UpdateUser extends React.Component {
                 <br></br>
                 <h3>Birthday: {this.state.dob}</h3>
                 <br></br>
-                <h3> FirstName: {this.state.firstName}</h3>
+                <h3>FirstName: {this.state.firstName}</h3>
                 <br></br>
                 <h3>LastName: {this.state.lastName}</h3>
                 <br></br>

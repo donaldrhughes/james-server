@@ -25,7 +25,7 @@ export default class Home extends Component {
                         <Col />
                     </Row>
                     <Row>
-                        <Col />
+                        <Col></Col>
                         <Col><Login /></Col>
                         <Col />
                     </Row>
