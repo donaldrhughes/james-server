@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import '../../app.css'
 import "./lobby.css";
 // import axios from 'axios';
@@ -22,10 +22,9 @@ class Lobby extends Component {
     if (this.state.loading) return <Loader />;
     return (
       <div>
-        <Container>
-          <div className="head"> James Albert Cosmetics - User Area {this.props.tokenData.username}.</div>
-        </Container>
-        
+        <Card>
+          <div className=""> James Albert Cosmetics - Try our products.</div>
+        </Card>
       </div>
     );
   }
