@@ -125,13 +125,12 @@ class UpdateUser extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="back">
         <Card>
           <Row>
             {/* <Col></Col> */}
             <Col><div className="head">Update your profile</div>
               <div align="right">
-                
                 <div>Username: {this.state.username} </div>
               
                 <div>Email: {this.state.email}</div>

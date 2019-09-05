@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Card } from "react-bootstrap";
-import Logo from "../../images/JA-Logo-sml.png";
+import { Row, Col } from "react-bootstrap";
 import '../../app.css'
 import "./home.css";
 
@@ -8,6 +7,8 @@ import "./home.css";
 //Components
 // import Footer from "../../components/common/Footer/Footer"
 import Login from "../../components/Login/index";
+import Logo from "../../components/common/Logo";
+import Header from "../../components/common/Header";
 
 // //Contexts
 import { MainContext } from '../../contexts/MainContext';
@@ -19,10 +20,15 @@ export default class Home extends Component {
     static contextType = MainContext;
     render() {
         return (
-            <section className="sectionStyle">
+            <section className="mainbg">
                     <Row>
                         <Col />
-                        <Col><Card><img src={Logo} alt="Logo"></img></Card></Col>
+                        <Col><Logo></Logo></Col>
+                        <Col />
+                    </Row>
+                    <Row>
+                        <Col></Col>
+                        <Col><Header>Header</Header> </Col>
                         <Col />
                     </Row>
                     <Row>

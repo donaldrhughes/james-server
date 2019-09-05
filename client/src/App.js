@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { PrivateRoute } from './components/PrivateRoute/index'
 //:for global state managment
 import MainContextProvider from './contexts/MainContext';
+import Logout from './components/common/Logout';
 
 //Screen Components (Pages)
 import Home from "./pages/Home/home";
@@ -21,7 +22,7 @@ import Splash from "./pages/Splash/splash";
 import Profile from "./pages/Profile/Profile";
 import Special from "./pages/Special";
 import Product from "./pages/Products";
-import Logout from './components/common/Logout';
+
 // import About from "./pages/About/About";
 
 

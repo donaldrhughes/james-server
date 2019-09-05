@@ -4,7 +4,7 @@ import { Row, Col, Button, FormGroup, FormControl, Card } from "react-bootstrap"
 import Loader from '../Loader/Loader';
 import axios from 'axios';
 import '../../app.css'
-import "./login.css";
+import "./login.scss";
 
 
 class Login extends Component {
@@ -71,61 +71,54 @@ class Login extends Component {
   render() {
     if (this.state.loading) return <Loader />;
     return (
-     
-        <Card className="loginText">
-          <form onSubmit={this.handleSubmit}>
-            <FormGroup controlId="email">
-              <div className="head center">Login</div>
-              <Row>
-                <FormControl
-                  type="email"
-                  className="inputBox"
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                  placeholder="Email" />
-              </Row>
-            </FormGroup>
-            <FormGroup controlId="password" >
-              {/* <div className="#">Password</div> */}
-              <Row>
-             <FormControl
-                  type="password"
-                  className="inputBox"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                  placeholder="Password" />
-              </Row>
-            </FormGroup>
-            <Row>
-              <Col><input className="btn align" type="submit" value="Enter" /></Col>
-            </Row></form>
-          <Row>
-            <Col><div className="join align">Join Up</div></Col>
-          </Row>
-          <Row>
-            <Col><Link to="/register">
-              <Button className="regBtn align" type="submit">
-                Register
-              </Button>
-            </Link></Col>
-          </Row>
-          <Row>
-            <Col><div className="align">Forgot Password?</div></Col>
-          </Row>
-          <Row>
-            <Col><Link to="/forgot">
-              <Button className="forgotBtn align" type="submit">
-                Reset
-                  </Button>
-            </Link></Col>
-          </Row>
 
+      <Card className="loginText">
+        <form onSubmit={this.handleSubmit}>
+          <FormGroup controlId="email">
+            {/* <div className="head center">Login</div> */}
+            <Row>
+              <FormControl
+                type="email"
+                className="inputBox"
+                value={this.state.email}
+                onChange={this.handleChange}
+                placeholder="Email" />
+            </Row>
+          </FormGroup>
+          <FormGroup controlId="password" >
+            {/* <div className="#">Password</div> */}
+            <Row>
+              <FormControl
+                type="password"
+                className="inputBox"
+                value={this.state.password}
+                onChange={this.handleChange}
+                placeholder="Password" />
+            </Row>
+          </FormGroup>
+          {/* <Row>
+            <Col></Col>
+            <Col><div className="align">Login</div></Col>
+            <Col></Col>
+          </Row> */}
+          <Row>
+            <Col></Col>
+            <Col><input className="btn loginBtn align" type="submit" value="Enter" /></Col>
+            <Col></Col>
+          </Row>
+        </form>
+        <div className="separator">
           <Row>
             <Col></Col>
             <Col></Col>
             <Col></Col>
           </Row>
-        </Card>
+        </div>
+        <Row>
+          <Col><div className="mfix"><div>Register</div><Link to="/register"><Button className="btn regBtn" type="submit">Join</Button></Link></div></Col>
+          <Col><div className="separator2"><div>Forgot</div><Link to="/forgot"><Button className="btn forgotBtn" type="submit">Reset</Button></Link></div></Col>
+        </Row>
+      </Card>
     );
   }
 }

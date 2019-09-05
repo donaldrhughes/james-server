@@ -20,7 +20,7 @@ export default class Splash extends Component {
         const tokenData = privateHelpers.payload();
         this.props = tokenData;
         return (
-            <section className="sectionStyle">
+            <section className="splashbg">
                 <Row>
                     <Col />
                     <Col>

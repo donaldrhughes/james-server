@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
 // import Logo from "../../images/JA-Logo-sml.png";
-import '../../app.css'
+import '../../app.css';
 import "./special.css";
 
 //Components
 import privateHelpers from '../../components/PrivateRoute/helpers/private.helper'
 // import Lobby from "../../components/Lobby/index";
-import Nav from '../../components/common/Nav'
-// import Logout from "../../components/common/Logout"
+import Nav from '../../components/common/Nav';
+// import Logout from "../../components/common/Logout";
 
 //Contexts
 import { MainContext } from '../../contexts/MainContext';
@@ -20,7 +20,7 @@ export default class Special extends Component {
         const tokenData = privateHelpers.payload();
         this.props = tokenData;
         return (
-            <section className="sectionStyle">
+            <section className="specialsbg">
                 <Row>
                     <Col />
                     <Col>
