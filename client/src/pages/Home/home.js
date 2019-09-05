@@ -8,7 +8,7 @@ import "./home.css";
 import Footer from "../../components/common/Footer/Footer"
 import Login from "../../components/Login/index";
 import Logo from "../../components/common/Logo";
-import Header from "../../components/common/Header";
+// import Header from "../../components/common/Header";
 
 // //Contexts
 import { MainContext } from '../../contexts/MainContext';
