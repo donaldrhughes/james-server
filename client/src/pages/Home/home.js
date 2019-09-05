@@ -5,7 +5,7 @@ import "./home.css";
 
 
 //Components
-// import Footer from "../../components/common/Footer/Footer"
+import Footer from "../../components/common/Footer/Footer"
 import Login from "../../components/Login/index";
 import Logo from "../../components/common/Logo";
 import Header from "../../components/common/Header";
@@ -27,13 +27,16 @@ export default class Home extends Component {
                         <Col />
                     </Row>
                     <Row>
-                        <Col></Col>
-                        <Col><Header>Header</Header> </Col>
-                        <Col />
+                        <Col> </Col>
                     </Row>
                     <Row>
                         <Col></Col>
                         <Col><Login /></Col>
+                        <Col />
+                    </Row>
+                    <Row>
+                        <Col></Col>
+                        <Col><Footer /></Col>
                         <Col />
                     </Row>
             </section>

@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import { Card, Row, Col } from "react-bootstrap";
-import Logo from "../../images/JA-Logo-sml.png";
+import { Row, Col } from "react-bootstrap";
+
 import '../../app.css'
 // import "./style.css";
 
 
 //Components
 import Registration from "../../components/Registration/index";
-// import Cancel from "../../components/common/Cancel"
+import Footer from "../../components/common/Footer/Footer"
+import Logo from "../../components/common/Logo";
 
 export default class Register extends Component {
     // state = {
@@ -20,8 +21,28 @@ export default class Register extends Component {
 
     render() {
         return (
-            <section className="sectionStyle">
-                <div>
+            <section className="mainbg">
+                <Row>
+                        <Col />
+                        <Col><Logo></Logo></Col>
+                        <Col />
+                    </Row>
+                    <Row>
+                        <Col> </Col>
+                    </Row>
+                    <Row>
+                        <Col></Col>
+                        <Col>
+                        <Registration />
+                        </Col>
+                        <Col />
+                    </Row>
+                    <Row>
+                        <Col></Col>
+                        <Col><Footer /></Col>
+                        <Col />
+                    </Row>
+                {/* <div>
                 <Row>
                     <Col />
                     <Col><Card><img src={Logo} alt="Logo"></img></Card></Col>
@@ -36,15 +57,15 @@ export default class Register extends Component {
                 </Row>
                 <Row>
                     <Col></Col>
-                    <Col><Registration /></Col>
+                    <Col></Col>
                     <Col></Col>
                 </Row>
-                {/* <Row>
+                <Row>
                     <Col />
                     <Col></Col>
                     <Col />
-                </Row> */}
-                </div>
+                </Row> 
+                </div>*/}
             </section>
         );
     }
