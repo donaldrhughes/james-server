@@ -7,6 +7,8 @@ import '../../app.css'
 //Components
 import privateHelpers from '../../components/PrivateRoute/helpers/private.helper'
 import Lobby from "../../components/Lobby/index";
+import Logout from "../../components/common/Logout"
+
 // import { Link } from "react-router-dom";
 
 export default class Splash extends Component {
@@ -32,7 +34,7 @@ export default class Splash extends Component {
                 </Row>
                 <Row>
                     <Col />
-                    <Col-6>
+                    <Col-6><Logout></Logout>
                     <div className="#"></div></Col-6>
                     <Col />
                 </Row>
