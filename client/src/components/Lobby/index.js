@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Container } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import '../../app.css'
 import "./lobby.css";
 // import axios from 'axios';

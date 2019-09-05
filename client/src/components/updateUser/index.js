@@ -125,13 +125,12 @@ class UpdateUser extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="back">
         <Card>
           <Row>
             {/* <Col></Col> */}
             <Col><div className="head">Update your profile</div>
               <div align="right">
-                
                 <div>Username: {this.state.username} </div>
               
                 <div>Email: {this.state.email}</div>
@@ -217,7 +216,6 @@ class UpdateUser extends React.Component {
                         placeholder="phone"
                         margin="normal" />
                     </FormGroup>
-                    <h6> Here you can enter some information about yourself like an autobiography.  </h6>
                     <FormGroup>
                       <FormControl
                         id="bio"
