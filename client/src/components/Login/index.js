@@ -75,7 +75,7 @@ class Login extends Component {
         <Card className="loginText">
           <form onSubmit={this.handleSubmit}>
             <FormGroup controlId="email">
-              <div className="head align">Login</div>
+              <div className="head center">Login</div>
               <Row>
                 <FormControl
                   type="email"

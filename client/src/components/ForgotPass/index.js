@@ -48,7 +48,6 @@ class ForgotPass extends Component {
             errorsList += '<li>' + errors[i].msg + '</li>';
           }
           alert(errorsList)
-
         } else {
           const message = response.data.message;
           // console.log(message)

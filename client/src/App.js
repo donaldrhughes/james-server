@@ -12,13 +12,14 @@ import { PrivateRoute } from './components/PrivateRoute/index'
 //:for global state managment
 import MainContextProvider from './contexts/MainContext';
 
-//Import pages
+//Screen Components (Pages)
 import Home from "./pages/Home/home";
 import Register from "./pages/Register/register";
 import Forgot from "./pages/Forgot";
 import Reset from "./pages/Reset";
 import Splash from "./pages/Splash/splash"
 import Profile from "./pages/Profile/Profile"
+import Logout from './components/common/Logout';
 // import About from "./pages/About/About";
 
 
@@ -43,6 +44,7 @@ export default class App extends Component {
               <Route exact path="/reset" component={Reset} />
               <PrivateRoute exact path="/splash" component={Splash} />
               <PrivateRoute exact path="/profile" component={Profile} />
+              <PrivateRoute exact path="/logout" component={Logout} />
             </Switch>
           </Router>
         </Fragment>
