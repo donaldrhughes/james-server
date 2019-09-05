@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // Import components
 //   !Note: Add components to pages directly unless absolutely needed
 import { PrivateRoute } from './components/PrivateRoute/index'
+//:for global state managment
+import MainContextProvider from './contexts/MainContext';
 
 //Import pages
 import Home from "./pages/Home/home";
@@ -30,6 +32,7 @@ export default class App extends Component {
 
   render() {
     return (
+      <MainContextProvider>
         <Fragment>
           <Router>
             <Switch>
@@ -43,6 +46,7 @@ export default class App extends Component {
             </Switch>
           </Router>
         </Fragment>
+      </MainContextProvider>
     );
   }
 }
