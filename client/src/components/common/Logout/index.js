@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
 import { Button } from "react-bootstrap";
+import "../../../app.css"
 import "./logout.scss";
 
 //Components
@@ -29,7 +30,7 @@ logout = () => {
     return (
       <div>
        {/* a logout button (remove for auto log out)*/}
-       <Button onClick={this.logout }></Button>
+       <Button className="btn" onClick={this.logout }>Logout</Button>
       </div>
     );
   }

@@ -1,15 +1,18 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
-import Logo from "../../images/JA-Logo-sml.png";
+// import Logo from "../../images/JA-Logo-sml.png";
 import '../../app.css'
-// import "./style.css";
+import "./splash.css";
 
 //Components
 import privateHelpers from '../../components/PrivateRoute/helpers/private.helper'
 import Lobby from "../../components/Lobby/index";
-import Logout from "../../components/common/Logout"
+import Nav from '../../components/common/Nav'
+// import Logout from "../../components/common/Logout"
 
-// import { Link } from "react-router-dom";
+//Contexts
+import { MainContext } from '../../contexts/MainContext';
+
 
 export default class Splash extends Component {
 
@@ -20,7 +23,9 @@ export default class Splash extends Component {
             <section className="sectionStyle">
                 <Row>
                     <Col />
-                    <Col><img src={Logo} alt="Logo"></img></Col>
+                    <Col>
+                    {/* <img src={Logo} alt="Logo"></img> */}
+                    </Col>
                     <Col />
                 </Row>
                 <Row>
@@ -34,8 +39,11 @@ export default class Splash extends Component {
                 </Row>
                 <Row>
                     <Col />
-                    <Col-6><Logout></Logout>
-                    <div className="#"></div></Col-6>
+                    <Col-6>
+                        <Nav />
+                        {/* <Logout></Logout> 
+                        <div className="#"></div>*/}
+                    </Col-6>
                     <Col />
                 </Row>
                 <Row>
@@ -43,6 +51,8 @@ export default class Splash extends Component {
                     <Col><Lobby tokenData={tokenData} /></Col>
                     <Col />
                 </Row>
+
+
             </section>
         );
     }
