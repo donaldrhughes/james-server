@@ -40,8 +40,13 @@ code {
     color: white;
     font-size: 22px;
     font-weight: bold;
-};
-
+}
+.inputBox {
+    width: 133%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size:20px;
+  }
 /* .cardStyle{
     padding: 7px;
     margin-top: 4px;
