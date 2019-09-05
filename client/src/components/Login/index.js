@@ -75,59 +75,52 @@ class Login extends Component {
         <Card className=" loginText">
           <form onSubmit={this.handleSubmit}>
             <FormGroup controlId="email">
-              <div className="#">Login</div>
+              <div>Login</div>
               <Row>
-                <Col></Col>
-                <Col><FormControl
+                <FormControl
                   type="email"
                   className="inputBox"
                   value={this.state.email}
                   onChange={this.handleChange}
-                  placeholder="Email" /></Col>
-                <Col></Col>
+                  placeholder="Email" />
               </Row>
             </FormGroup>
             <FormGroup controlId="password" >
               {/* <div className="#">Password</div> */}
               <Row>
-                <Col></Col>
-                <Col><FormControl
+             <FormControl
                   type="password"
                   className="inputBox"
                   value={this.state.password}
                   onChange={this.handleChange}
-                  placeholder="Password" /></Col>
-                <Col></Col>
+                  placeholder="Password" />
               </Row>
             </FormGroup>
             <Row>
-              <Col></Col>
               <Col><input align="center" className="btn" type="submit" value="Enter" /></Col>
-              <Col></Col>
             </Row></form>
-
           <Row>
             {/* <Col></Col> */}
-            <Col><div className="loginHead">Are you ready to join?</div></Col>
+            <Col><div>Are you ready to join?</div></Col>
             {/* <Col></Col> */}
           </Row>
           <Row>
-            <Col></Col>
+            {/* <Col></Col> */}
             <Col><Link to="/register">
               <Button className="regBtn" type="submit">
                 Join
               </Button>
             </Link></Col>
-            <Col />
+            {/* <Col /> */}
           </Row>
           <Row>
-            <Col></Col>
+            {/* <Col></Col> */}
             <Col><Link to="/forgot">
               <Button className="forgotBtn" type="submit">
                 Forgot Password?
                   </Button>
             </Link></Col>
-            <Col></Col>
+            {/* <Col></Col> */}
           </Row>
 
           <Row>
