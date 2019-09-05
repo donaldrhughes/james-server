@@ -74,18 +74,16 @@ class ForgotPass extends Component {
                   type="email"
                   value={this.state.email}
                   onChange={this.handleChange}
-                  placeholder="Enter Your Email..."
+                  placeholder="Email"
                   margin="normal" />
                   </div>
               </Col>
             </Row>
           </FormGroup>
-          <div className="center"><input align="center" className="submit btn" type="submit" value="Submit" /></div>
+          <input className="btn forgotBtn center" type="submit" value="Submit" />
         </form>
         <Row>
-          <Col />
           <Col><div className="center"><Cancel /></div></Col>
-          <Col />
         </Row>
       </Card>
     );

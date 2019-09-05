@@ -101,3 +101,6 @@ code {
     /* margin-top: 75%; */
     margin-left:20%;
   }
+  .cancelBtn{
+    text-align: center;
+  }
