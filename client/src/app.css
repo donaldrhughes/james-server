@@ -73,12 +73,10 @@ code {
     color: white;
     background-color: rgb(26, 26, 152);
 }
-
 .btn:hover{
     background-color: lightseagreen;
     color:black
 }
-
 .head {
     color: darkcyan;
     font-size: 22px;
@@ -109,7 +107,7 @@ code {
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 105px;
+    height: 75px;
     width: 100%;
 }
 .phantom {
