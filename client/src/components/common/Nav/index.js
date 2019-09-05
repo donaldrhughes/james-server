@@ -54,17 +54,19 @@ class Nav extends Component {
                                     id={`dropdown-variants-${variant}`}
                                     key={variant}>
                                     <Dropdown.Item eventKey="1" onClick={() => this.props.history.push('/splash') } >Main</Dropdown.Item>
-                                    <Dropdown.Item eventKey="2" onClick={() => this.props.history.push('/profile') } >Profile</Dropdown.Item>
+                                    
                                     {/* <Dropdown.Item eventKey="3" active>Active Item</Dropdown.Item> */}
-                                    <Dropdown.Item eventKey="3" onClick={() => this.props.history.push('/profile') } >Products</Dropdown.Item>
-                                    <Dropdown.Item eventKey="4" onClick={() => this.props.history.push('/profile') } >Specials</Dropdown.Item>
+                                    <Dropdown.Item eventKey="2" onClick={() => this.props.history.push('/profile') } >Products</Dropdown.Item>
+                                    <Dropdown.Item eventKey="3" onClick={() => this.props.history.push('/profile') } >Specials</Dropdown.Item>
+                                    <Dropdown.Item eventKey="8" onClick={() => this.props.history.push('/profile') } >Profile</Dropdown.Item>
                                     <Dropdown.Divider />
                                     <Dropdown.Item eventKey="9" onClick={() => this.props.history.push('/logout') } >Logout</Dropdown.Item>
                                 </DropdownButton>
                             ),
                         )}
                     </ButtonToolbar>
-                </Card></Col>
+                </Card>
+                </Col>
                 <Col></Col>
                 </Row>
             </div>

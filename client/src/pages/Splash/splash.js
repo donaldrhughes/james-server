@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 // import Logo from "../../images/JA-Logo-sml.png";
 import '../../app.css'
 import "./splash.css";
@@ -15,7 +15,7 @@ import { MainContext } from '../../contexts/MainContext';
 
 
 export default class Splash extends Component {
-
+    static contextType = MainContext;
     render() {
         const tokenData = privateHelpers.payload();
         this.props = tokenData;
@@ -24,23 +24,27 @@ export default class Splash extends Component {
                 <Row>
                     <Col />
                     <Col>
-                    {/* <img src={Logo} alt="Logo"></img> */}
+                  
+                    <div className="head">
+                            <p>Welcome, {this.props.username}.</p>
+                        </div>
+                   
                     </Col>
-                    <Col />
+                   <Col>
+                   <Nav />
+                   </Col>
                 </Row>
                 <Row>
                     <Col />
                     <Col-6>
-                        <div className="head">
-                            <p>Welcome {this.props.username}</p>
-                        </div>
+                    <Lobby tokenData={tokenData} />
                     </Col-6>
                     <Col />
                 </Row>
                 <Row>
                     <Col />
                     <Col-6>
-                        <Nav />
+                        
                         {/* <Logout></Logout> 
                         <div className="#"></div>*/}
                     </Col-6>
@@ -48,7 +52,7 @@ export default class Splash extends Component {
                 </Row>
                 <Row>
                     <Col />
-                    <Col><Lobby tokenData={tokenData} /></Col>
+                    <Col></Col>
                     <Col />
                 </Row>
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 import "../../../app.css"
 import "./logout.scss";
 
@@ -15,22 +15,22 @@ class Logout extends Component {
       };
     }
     //automatic logout
-// componentDidMount(){
-//   privateHelpers.logout();
-//  this.props.history.push('/');
-// }
+componentDidMount(){
+  privateHelpers.logout();
+ this.props.history.push('/');
+}
 
   //a logout button (remove for auto log out)!
-logout = () => {
-    privateHelpers.logout();
-    this.props.history.push('/');
-}
+// logout = () => {
+//     privateHelpers.logout();
+//     this.props.history.push('/');
+// }
 
   render() {
     return (
       <div>
        {/* a logout button (remove for auto log out)*/}
-       <Button className="btn" onClick={this.logout }>Logout</Button>
+       {/* <Button className="btn" onClick={this.logout }>Logout</Button> */}
       </div>
     );
   }
