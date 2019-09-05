@@ -127,13 +127,13 @@ class Registration extends React.Component {
               margin="normal" />
           </FormGroup>
           <div className="center">
-            <input className="submit btn btn-outline-secondary" type="submit" value="Join" />
+            <input className="btn regBtn" type="submit" value="Join" />
           </div>
         </form>
         <Row>
-          <Col />
-          <Col><div className="center"><Cancel /></div></Col>
-          <Col />
+          <Col>
+            <Cancel />
+            </Col>
         </Row>
         <Row>
           <Col></Col>
