@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
 import { Row, Col, FormGroup, FormControl, Card } from "react-bootstrap";
 import axios from 'axios';
+import "../../app.css"
 import "./forgot.css";
 
 
@@ -64,28 +65,27 @@ class ForgotPass extends Component {
   render() {
     if (this.state.loading) return <Loader />;
     return (
-      <Card className="forgotText">
+      <Card>
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="email">
-            <div className="head">Forgot Password</div>
+            <div className="center head">Forgot Password</div>
             <Row>
-              <Col></Col>
               <Col>
-                <FormControl
+              <div className="center"><FormControl
                   type="email"
                   value={this.state.email}
                   onChange={this.handleChange}
                   placeholder="Enter Your Email..."
                   margin="normal" />
+                  </div>
               </Col>
-              <Col></Col>
             </Row>
           </FormGroup>
-          <input align="center" className="submit btn" type="submit" value="Submit" />
+          <div className="center"><input align="center" className="submit btn" type="submit" value="Submit" /></div>
         </form>
         <Row>
           <Col />
-          <Col><div align="center"><Cancel /></div></Col>
+          <Col><div className="center"><Cancel /></div></Col>
           <Col />
         </Row>
       </Card>

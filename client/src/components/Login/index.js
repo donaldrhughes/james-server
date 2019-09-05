@@ -71,75 +71,61 @@ class Login extends Component {
   render() {
     if (this.state.loading) return <Loader />;
     return (
-      <div className="cardStyle" >
-        <Card className=" loginText">
+     
+        <Card className="loginText">
           <form onSubmit={this.handleSubmit}>
             <FormGroup controlId="email">
-              <div className="#">Login</div>
+              <div className="head align">Login</div>
               <Row>
-                <Col></Col>
-                <Col><FormControl
+                <FormControl
                   type="email"
                   className="inputBox"
                   value={this.state.email}
                   onChange={this.handleChange}
-                  placeholder="Email" /></Col>
-                <Col></Col>
+                  placeholder="Email" />
               </Row>
             </FormGroup>
             <FormGroup controlId="password" >
               {/* <div className="#">Password</div> */}
               <Row>
-                <Col></Col>
-                <Col><FormControl
+             <FormControl
                   type="password"
                   className="inputBox"
                   value={this.state.password}
                   onChange={this.handleChange}
-                  placeholder="Password" /></Col>
-                <Col></Col>
+                  placeholder="Password" />
               </Row>
             </FormGroup>
             <Row>
-              <Col></Col>
-              <Col><input align="center" className="btn" type="submit" value="Enter" /></Col>
-              <Col></Col>
+              <Col><input className="btn align" type="submit" value="Enter" /></Col>
             </Row></form>
-
           <Row>
-            {/* <Col></Col> */}
-            <Col><div className="loginHead">Are you ready to join?</div></Col>
-            {/* <Col></Col> */}
+            <Col><div className="join align">Join Up</div></Col>
           </Row>
           <Row>
-            <Col></Col>
             <Col><Link to="/register">
-              <Button className="regBtn" type="submit">
-                Join
+              <Button className="regBtn align" type="submit">
+                Register
               </Button>
             </Link></Col>
-            <Col />
           </Row>
           <Row>
-            <Col></Col>
+            <Col><div className="align">Forgot Password?</div></Col>
+          </Row>
+          <Row>
             <Col><Link to="/forgot">
-              <Button className="forgotBtn" type="submit">
-                Forgot Password?
+              <Button className="forgotBtn align" type="submit">
+                Reset
                   </Button>
             </Link></Col>
-            <Col></Col>
           </Row>
 
           <Row>
             <Col></Col>
             <Col></Col>
             <Col></Col>
-
           </Row>
-
-
         </Card>
-      </div>
     );
   }
 }

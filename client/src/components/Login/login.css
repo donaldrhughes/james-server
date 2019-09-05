@@ -1,28 +1,29 @@
     .loginText {
       text-align:center;
       font-size:20px;
-     
-    }
-    .inputBox {
-      width: 133%;
-      /* text-align:center; */
-      font-size:20px;
     }
     .regBtn {
       background-color: rgb(91, 8, 91);
-      margin-top: 5%;
-      margin-bottom: 7%;
+      /* margin-top: 2%; */
+      margin-bottom: 3%;
     }
+  /*  .join{
+       margin-top: 100%; 
+    }*/
     .forgotBtn{
       background-color: black;
-      margin-bottom: 7%;
+      margin-bottom: 3%;
     }
     .card{
       padding: 7px;
+      /* text-align: center; */
       margin-top: 4px;
       background-color: #ddd;
       border: 2px solid grey;
       color: black;
+    }
+    .center{
+      text-align: center;
     }
 
 
