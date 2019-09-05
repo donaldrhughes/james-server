@@ -217,7 +217,6 @@ class UpdateUser extends React.Component {
                         placeholder="phone"
                         margin="normal" />
                     </FormGroup>
-                    <h6> Here you can enter some information about yourself like an autobiography.  </h6>
                     <FormGroup>
                       <FormControl
                         id="bio"

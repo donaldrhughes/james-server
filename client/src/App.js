@@ -17,8 +17,10 @@ import Home from "./pages/Home/home";
 import Register from "./pages/Register/register";
 import Forgot from "./pages/Forgot";
 import Reset from "./pages/Reset";
-import Splash from "./pages/Splash/splash"
-import Profile from "./pages/Profile/Profile"
+import Splash from "./pages/Splash/splash";
+import Profile from "./pages/Profile/Profile";
+import Special from "./pages/Special";
+import Product from "./pages/Products";
 import Logout from './components/common/Logout';
 // import About from "./pages/About/About";
 
@@ -43,6 +45,8 @@ export default class App extends Component {
               <Route exact path="/forgot" component={Forgot} />
               <Route exact path="/reset" component={Reset} />
               <PrivateRoute exact path="/splash" component={Splash} />
+              <PrivateRoute exact path="/specials" component={Special} />
+              <PrivateRoute exact path="/products" component={Product} />
               <PrivateRoute exact path="/profile" component={Profile} />
               <PrivateRoute exact path="/logout" component={Logout} />
             </Switch>
