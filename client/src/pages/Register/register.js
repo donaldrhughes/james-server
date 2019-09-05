@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import Logo from "../../images/JA-Logo-sml.png";
 import '../../app.css'
-import "./style.css";
+// import "./style.css";
 
 
 //Components

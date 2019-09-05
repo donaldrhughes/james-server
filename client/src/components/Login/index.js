@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { withRouter, Link } from 'react-router-dom';
-import { Button, FormGroup, FormControl, Card } from "react-bootstrap";
+import { Row, Col, Button, FormGroup, FormControl, Card } from "react-bootstrap";
 import Loader from '../Loader/Loader';
 import axios from 'axios';
+import '../../app.css'
 import "./login.css";
 
 
@@ -70,40 +71,75 @@ class Login extends Component {
   render() {
     if (this.state.loading) return <Loader />;
     return (
-      <div>
-        <Card className="loginText">
-            <form onSubmit={this.handleSubmit}>
-              <FormGroup controlId="email">
-                <div className="#">Email</div>
-                <FormControl
+      <div className="cardStyle" >
+        <Card className=" loginText">
+          <form onSubmit={this.handleSubmit}>
+            <FormGroup controlId="email">
+              <div className="#">Login</div>
+              <Row>
+                <Col></Col>
+                <Col><FormControl
                   type="email"
-                  className="loginText"
+                  className="inputBox"
                   value={this.state.email}
                   onChange={this.handleChange}
-                  placeholder="Enter Password"/>
-              </FormGroup>
-              <FormGroup controlId="password" >
-                <div className="#">Password</div>
-                <FormControl
+                  placeholder="Email" /></Col>
+                <Col></Col>
+              </Row>
+            </FormGroup>
+            <FormGroup controlId="password" >
+              {/* <div className="#">Password</div> */}
+              <Row>
+                <Col></Col>
+                <Col><FormControl
+                  type="password"
+                  className="inputBox"
                   value={this.state.password}
                   onChange={this.handleChange}
-                  type="password"
-                  placeholder="Enter Password"/>
-              </FormGroup>
-                <input align="center" className="submit btn" type="submit" value="Submit" />
-            </form>  
-              <Link to="/register">
-                <Button className="regBtn" type="submit">
-                  Join
+                  placeholder="Password" /></Col>
+                <Col></Col>
+              </Row>
+            </FormGroup>
+            <Row>
+              <Col></Col>
+              <Col><input align="center" className="btn" type="submit" value="Enter" /></Col>
+              <Col></Col>
+            </Row></form>
+
+          <Row>
+            {/* <Col></Col> */}
+            <Col><div className="loginHead">Are you ready to join?</div></Col>
+            {/* <Col></Col> */}
+          </Row>
+          <Row>
+            <Col></Col>
+            <Col><Link to="/register">
+              <Button className="regBtn" type="submit">
+                Join
               </Button>
-              </Link>
-              <Link to="/forgot">
-                <Button className="forgotBtn" type="submit">
-                  Forgot Password
-              </Button>
-              </Link>
+            </Link></Col>
+            <Col />
+          </Row>
+          <Row>
+            <Col></Col>
+            <Col><Link to="/forgot">
+              <Button className="forgotBtn" type="submit">
+                Forgot Password?
+                  </Button>
+            </Link></Col>
+            <Col></Col>
+          </Row>
+
+          <Row>
+            <Col></Col>
+            <Col></Col>
+            <Col></Col>
+
+          </Row>
+
+
         </Card>
-        </div>
+      </div>
     );
   }
 }

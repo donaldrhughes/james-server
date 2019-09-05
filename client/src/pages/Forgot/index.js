@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import Logo from "../../images/JA-Logo-sml.png";
 import '../../app.css';
-import "./style.css";
+// import "./style.css";
 
 //Components
 import ForgotPass from "../../components/ForgotPass/index";
@@ -12,9 +12,6 @@ export default class Register extends Component {
     // state = {
     //     text: ""
     // };
-
-    // componentDidMount() {
-    // }
 
     render() {
         return (

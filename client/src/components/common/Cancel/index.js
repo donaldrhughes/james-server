@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
 import { MainContext } from '../../../contexts/MainContext';
-
+import '../../../app.css'
 
 class Cancel extends Component {
     constructor(props) {
