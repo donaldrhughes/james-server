@@ -5,6 +5,8 @@ import "./lobby.css";
 // import axios from 'axios';
 // import { Link } from 'react-router-dom';
 
+//Components
+import Loader from '../Loader/Loader';
 
 class Lobby extends Component {
   constructor(props) {
@@ -17,6 +19,7 @@ class Lobby extends Component {
     }
 
   render() {
+    if (this.state.loading) return <Loader />;
     return (
       <div>
         <Container>

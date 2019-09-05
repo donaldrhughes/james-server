@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from "axios";
 import { withRouter } from "react-router-dom";
-import { FormGroup, FormControl, Card } from "react-bootstrap";
+import { Row, Col, FormGroup, FormControl, Card } from "react-bootstrap";
 import "./register.css";
 
 //Components
 import Loader from '../Loader/Loader'
 // import { MainContext } from '../../contexts/MainContext';
+import Cancel from "../../components/common/Cancel"
 
 class Registration extends React.Component {
   constructor(props) {
@@ -69,8 +70,8 @@ class Registration extends React.Component {
     if (this.state.loading) return <Loader />;
     return (
       <Card>
-        <div className="regText">
-        <div className="registerText">Sign Up For James Albert!</div>
+        <div className="regText"></div>
+        <div className="#">Sign Up For James Albert!</div>
           <div align="center">
             <form onSubmit={this.handleSubmit}>
               <FormGroup>
@@ -128,8 +129,20 @@ class Registration extends React.Component {
               </FormGroup>
               <input className="submit btn btn-outline-secondary" type="submit" value="Join" />
             </form>
+            <Row>
+                    <Col />
+                    <Col><div align="center"><Cancel /></div></Col>
+                    <Col />
+                </Row>
           </div>
-        </div>
+  
+
+          <Row>
+            <Col></Col>
+            <Col></Col>
+            <Col></Col>
+
+          </Row>
       </Card >
     );
   }

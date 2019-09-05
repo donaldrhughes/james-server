@@ -1,7 +1,10 @@
 import React, { createContext, Component } from 'react';
+
+//Components
+//Hooks Example
 // import TableTalk from '../components/common/TableTalk'
 
-
+//Context
 export const MainContext = createContext();
 
 class MainProvider extends Component {

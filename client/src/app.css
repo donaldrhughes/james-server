@@ -26,11 +26,14 @@ code {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     font-size:16px;
-    background-color: rgb(26, 26, 152)
+    color: white;
+    background-color: rgb(26, 26, 152);
+    margin-bottom: 2%;
 }
 
 .btn:hover{
-    background-color: pink
+    background-color: lightseagreen;
+    color:black
 }
 
 .head {
@@ -39,10 +42,10 @@ code {
     font-weight: bold;
 };
 
-.cardStyle{
+/* .cardStyle{
     padding: 7px;
     margin-top: 4px;
     background-color: #eee;
     border: 2px solid red;
     color: black;
-  }
+  } */

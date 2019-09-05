@@ -7,7 +7,7 @@ import '../../app.css'
 
 //Components
 import Registration from "../../components/Registration/index";
-
+// import Cancel from "../../components/common/Cancel"
 
 export default class Register extends Component {
     // state = {
@@ -39,6 +39,11 @@ export default class Register extends Component {
                     <Col><Registration /></Col>
                     <Col></Col>
                 </Row>
+                {/* <Row>
+                    <Col />
+                    <Col></Col>
+                    <Col />
+                </Row> */}
                 </div>
             </section>
         );

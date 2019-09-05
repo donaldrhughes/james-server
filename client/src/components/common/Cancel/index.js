@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
 import { MainContext } from '../../../contexts/MainContext';
 import '../../../app.css'
+//Components
+import Loader from '../../Loader/Loader';
 
 class Cancel extends Component {
     constructor(props) {
@@ -23,12 +25,13 @@ class Cancel extends Component {
     handleSubmit = event => {
         event.preventDefault();
         this.setState({ loading: true })
-        let message = '';
-        this.context.updateMessage(message);
+        // let message = '';
+        // this.context.updateMessage(message);
         this.props.history.push('/');
     }
 
     render() {
+        if (this.state.loading) return <Loader />;
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
