@@ -4,9 +4,12 @@
     }
     .regBtn {
       background-color: rgb(91, 8, 91);
-      margin-top: 5%;
+      /* margin-top: 2%; */
       margin-bottom: 3%;
     }
+  /*  .join{
+       margin-top: 100%; 
+    }*/
     .forgotBtn{
       background-color: black;
       margin-bottom: 3%;

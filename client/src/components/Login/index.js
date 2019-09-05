@@ -75,7 +75,7 @@ class Login extends Component {
         <Card className="loginText">
           <form onSubmit={this.handleSubmit}>
             <FormGroup controlId="email">
-              <div className="align">Login</div>
+              <div className="head align">Login</div>
               <Row>
                 <FormControl
                   type="email"
@@ -100,19 +100,22 @@ class Login extends Component {
               <Col><input className="btn align" type="submit" value="Enter" /></Col>
             </Row></form>
           <Row>
-            <Col><div className="align">Ready to join?</div></Col>
+            <Col><div className="join align">Join Up</div></Col>
           </Row>
           <Row>
             <Col><Link to="/register">
               <Button className="regBtn align" type="submit">
-                Join
+                Register
               </Button>
             </Link></Col>
           </Row>
           <Row>
+            <Col><div className="align">Forgot Password?</div></Col>
+          </Row>
+          <Row>
             <Col><Link to="/forgot">
               <Button className="forgotBtn align" type="submit">
-                Forgot Password
+                Reset
                   </Button>
             </Link></Col>
           </Row>
