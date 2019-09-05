@@ -18,20 +18,19 @@ router.post("/register", [
     check('username', 'Username Does Not Meet Requirements').escape().matches(/(^$)|^[.0-9a-zA-Z\s-]+$]{0,8}$/),
     //Password: min 5 char, max 24. one uppercase. one lower case. one special character. @#*!$%+=()
     check('password', 'Password does not meet the requirements.').not().isEmpty().trim().escape().matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#*!$%+=()])[0-9a-zA-Z@#*!$%+=()]{5,24}$/, "i"),
-    check('verifyPassword', 'Passwords do not match').custom((value, { req }) => (value === req.body.password)),
+    check('passwordVerify', 'Passwords do not match').custom((value, { req }) => (value === req.body.password)),
     check('dob', 'DoB requires 2 digit day and 2 digit month - use dash to separate - year is optional').not().isEmpty().trim().escape().matches(/^(?=.*[-])(?=.*[0-9])[0-9/-]{5,10}$/)
 ],
     function (req, res) {
         //store user registration errors, if they exist
         const errors = validationResult(req);
         const email = req.body.email
-        console.log(req.body);
-        console.log(errors)
-
+        // console.log(req.body);
+        // console.log(errors)
+        
         //if there are reg errors send them back to the client
         if (!errors.isEmpty()) {
             // console.log(errors);
-
             const hasError = true;
             return res.jsonp({ e: errors.array({ onlyFirstError: true }), hasE: hasError });
 
@@ -68,26 +67,17 @@ router.post("/register", [
                         user.hash = helpers.getHash(user.salt, req.body.password);
                         //create the user account in mysql
                         models.User.create(user)
-
                             .then(function (resp) {
-                                res.json({ resp, message: "A confirmation email has been sent.", hasError })
-
-                                //add firebase/mongo connection here for chat functionality
-
+                                res.json({ resp, message: "Account has been created.", hasError })
                             })
                             .catch(function (err) {
                                 res.json({ message: 'General creation error: Cannot create user.' });
                             })
-
                     } else {
                         res.json({ message: 'Account exists. Use forgot password link to reset.' });
-
                     }
-
                 })
-
         }
-
     })
 
 router.post("/login", [
@@ -100,7 +90,6 @@ router.post("/login", [
         const errors = validationResult(req);
         // console.log(req.body);
         // console.log(errors);
-
         if (!errors.isEmpty()) {
             // console.log(errors);
             const hasError = true;
@@ -131,16 +120,13 @@ router.post("/login", [
                     }
                     else {
                         return res.json({ message: 'Your username or password is incorrect.' });
-
                     }
                 })
                 .catch(function (err) {
                     return res.json({ message: err });
-
                 })
         }
     })
-
 
 router.post('/forgot_password', [
     //validate required fields from forgot password page
@@ -202,7 +188,6 @@ router.post('/forgot_password', [
                 },
                 function (user, token, done, err) {
                     // console.log(token, user);
-
                     //create the email data object for the nodemailer transport
                     const data = {
                         to: user.email,
@@ -286,24 +271,19 @@ router.post('/reset_password', [
                                         reset_password_token: forgotToken
                                     }
                                 }).then(function () {
-
                                     return res.json({
                                         message: 'Your token has expired.'
-
                                     })
                                 })
                         }
                         // console.log(user)
-
                         //validates the forgot token and new password exist and no errors
                         if (!err && forgotToken && newPass && time < user.reset_password_expires) {
                             //set the response to user var
                             user = user.dataValues;
                             // console.log(user)
-
                             //create a new hash using the existing users salt
                             const newhash = helpers.getHash(user.salt, newPass);
-
                             //update new hash and remove the existing token and expiration
                             models.User.update({
                                 hash: newhash,
@@ -325,15 +305,12 @@ router.post('/reset_password', [
                                 subject: 'Password Reset Confirmation',
                                 html: 'Your Tournament Zilch password has been reset.'
                             }
-
                             //send the password reset confirmation email
                             smtpTransport.sendMail(data, function (err) {
                                 if (!err) {
-
                                     return res.json({
                                         message: 'Your password has been reset.'
                                     });
-
                                 } else {
                                     return res.json({
                                         message: 'An error was returned during email confirmation.'
@@ -342,17 +319,13 @@ router.post('/reset_password', [
                             })
                         }
                     })
-
                 //make sure all info is in the URL
             } else {
                 return res.json({
                     message: 'Required submission info missing.'
                 });
             }
-
-
         }
     })
-
 
 module.exports = router;

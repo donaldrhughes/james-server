@@ -4,6 +4,9 @@ import { withRouter } from "react-router-dom";
 import { FormGroup, FormControl, Card } from "react-bootstrap";
 import "./register.css";
 
+//Components
+import Loader from '../Loader/Loader'
+// import { MainContext } from '../../contexts/MainContext';
 
 class Registration extends React.Component {
   constructor(props) {
@@ -18,7 +21,7 @@ class Registration extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
+  // static contextType = MainContext;
 
   handleChange = event => {
     this.setState({
@@ -28,34 +31,42 @@ class Registration extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-
-    if (this.state.password === this.state.passwordVerify) {
-      console.log(this.state.email)
+    this.setState({ loading: true })
       axios.post("/auth/register", {
         email: this.state.email,
         password: this.state.password,
+        passwordVerify: this.state.passwordVerify,
         username: this.state.username,
         dob: this.state.dob
       })
         .then((response) => {
-          console.log(response);
-          let message = response.data.message;
-          this.props.history.push('/');
-          alert(message)
+          this.setState({ loading: false })
+          if (response.data.hasE) {
+            // console.log(response);
+            const errorsJSON = JSON.parse(response.request.responseText);
+            const errors = errorsJSON.e;
+            let errorsList = '';
+            for (let i = 0; i < errors.length; i++) {
+              errorsList += '<li>' + errors[i].msg + '</li>';
+            }
+            // this.context.updateMessage(errorsList);
+            alert(errorsList)
+          } else {
+            const message = response.data.message;
+            // this.context.updateMessage(message);
+            alert(message)
+            this.props.history.push('/');
+          }
         })
         .catch(function (error) {
-          console.log(error);
+          // console.log(error);
+          // this.context.updateMessage(error);
+          alert(error)
         });
-
-    } else {
-
-      alert("Password and Confirm Password do not match")
-
-    }
-
   }
 
   render() {
+    if (this.state.loading) return <Loader />;
     return (
       <Card>
         <div className="regText">

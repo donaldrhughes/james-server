@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Card } from "react-bootstrap";
 import Logo from "../../images/JA-Logo-sml.png";
 import '../../app.css';
-import "./style.css";
+// import "./style.css";
 
 //Components
 import privateHelpers from '../../components/PrivateRoute/helpers/private.helper'
@@ -18,7 +18,7 @@ export default class Profile extends React.Component {
 
     render() {
         var tokenData = privateHelpers.payload();
-        this.props = tokenData;
+        // this.props = tokenData;
         return (
             <section className="sectionStyle">
                 <Row>

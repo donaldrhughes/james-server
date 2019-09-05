@@ -46,9 +46,9 @@ const syncOptions = { force: false };
 
 // In test, set syncOptions.force to true
 
-if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
-}
+// if (process.env.NODE_ENV === "test") {
+//   syncOptions.force = true;
+// }
 
 models.sequelize.sync(syncOptions).then(function () {
   app.listen(PORT, () => {

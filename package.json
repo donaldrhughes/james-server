@@ -11,7 +11,7 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build",
-    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "test": "NODE_ENV=test mocha ./test -u tdd --reporter spec --exit"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +19,8 @@
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
     "concurrently": "^4.1.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.7",
     "prettier": "^1.13.7"
@@ -42,6 +44,8 @@
     "react-loader-spinner": "^3.1.2",
     "react-router-dom": "^5.0.1",
     "sequelize": "^5.13.0",
-    "sequelize-cli": "^5.5.0"
+    "sequelize-cli": "^5.5.0",
+    "superagent": "^5.1.0",
+    "supertest": "^4.0.2"
   }
 }

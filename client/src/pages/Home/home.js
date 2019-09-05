@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import Logo from "../../images/JA-Logo-sml.png";
 import '../../app.css'
-import "./style.css";
+// import "./style.css";
 
 
 //Components
@@ -25,7 +25,7 @@ export default class Home extends Component {
                         <Col />
                     </Row>
                     <Row>
-                        <Col />
+                        <Col></Col>
                         <Col><Login /></Col>
                         <Col />
                     </Row>

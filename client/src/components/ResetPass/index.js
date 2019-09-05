@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { FormGroup, FormControl, Card } from "react-bootstrap";
-
-import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import axios from 'axios';
+import '../../app.css';
+import './resetpass.css';
+
+//Components
 import Loader from '../Loader/Loader'
-import '../../app.css'
-import "./login.css";
+
 
 class ResetPass extends Component {
   constructor(props) {

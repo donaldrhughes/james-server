@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import Logo from "../../images/JA-Logo-sml.png";
-import "./style.css";
+// import "./style.css";
 
 //Components
 import ResetPass from "../../components/ResetPass/index";
@@ -11,10 +11,6 @@ class Reset extends Component {
     // state = {
     //     text: ""
     // };
-
-    // componentDidMount() {
-
-    // }
 
     render() {
         return (

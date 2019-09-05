@@ -33,18 +33,29 @@ class ForgotPass extends Component {
       email: this.state.email
     })
       .then((response) => {
-        const token = response.data.token;
-        // localStorage.setItem("token", token)
-        let message = response.data.message; 
-        // console.log(token)
-        this.props.history.push('/');
-        alert(message)
+        this.setState({ loading: false })
+        // console.log(response);
+        if (response.data.hasE) {
+          const errorsJSON = JSON.parse(response.request.responseText);
+          const errors = errorsJSON.e;
+          let errorsList = '';
+          for (let i = 0; i < errors.length; i++) {
+            errorsList += '<li>' + errors[i].msg + '</li>';
+          }
+          alert(errorsList)
+
+        } else {
+          const message = response.data.message;
+          // console.log(message)
+          alert(message);
+          this.props.history.push('/');
+        }
       })
       .catch(function (error) {
         console.log(error);
+        alert(error)
       });
   }
-
 
   render() {
     return (

@@ -8,14 +8,11 @@ const privateHelpers = {
     },
     getToken() {
         return localStorage.getItem('token');
-
     },
     getUserData(token) {
         return privateHelpers.splitToken(token);
-
     },
     payload() {
-
         localStorage.getItem('token')
         //get token
         let token = privateHelpers.getToken();
@@ -26,10 +23,8 @@ const privateHelpers = {
     },
     isLoggedIn() {
         let token = localStorage.getItem('token');
-
         if (token != null) {
             const userData = privateHelpers.splitToken(token);
-
             if (userData.exp > Date.now() / 1000) {
                 return true
             }
@@ -44,7 +39,6 @@ const privateHelpers = {
     logout() {
         localStorage.removeItem('token');
     }
-
 }
 
 

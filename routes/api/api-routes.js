@@ -50,7 +50,6 @@ router.post("/updateuser", [
     //if there are reg errors send them back to the client
     if (!errors.isEmpty()) {
       // console.log(errors);
-
       const hasError = true;
       return res.jsonp({ e: errors.array({ onlyFirstError: true }), hasE: hasError });
 
@@ -60,9 +59,7 @@ router.post("/updateuser", [
       // console.log(errors);
       const userid = req.body.userid;
       const email = req.body.email;
-
       // console.log(req.body)
-
       models.User.update({
         address: req.body.address,
         city: req.body.city,
@@ -78,8 +75,7 @@ router.post("/updateuser", [
           }
         }).then(function (results) {
           // console.log(results)
-          res.json(results);
-
+          res.json({results, message: 'Your acount has been updated.'});
         })
     }
   });
