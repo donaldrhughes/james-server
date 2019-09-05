@@ -129,7 +129,7 @@ class UpdateUser extends React.Component {
         <Card>
           <Row>
             {/* <Col></Col> */}
-            <Col>Update your profile
+            <Col><div className="head">Update your profile</div>
               <div align="right">
                 
                 <div>Username: {this.state.username} </div>

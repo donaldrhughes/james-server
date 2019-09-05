@@ -15,7 +15,6 @@ export default class Home extends Component {
     //     text: ""
     // };
 
-
     render() {
         return (
             <section className="sectionStyle">
