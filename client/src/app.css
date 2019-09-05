@@ -101,6 +101,20 @@ code {
     /* margin-top: 75%; */
     margin-left:20%;
   }
-  .cancelBtn{
+  .footer {
+    background-color: #ddd;
+    border-top: 1px solid #E7E7E7;
     text-align: center;
-  }
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 105px;
+    width: 100%;
+}
+.phantom {
+  display: block;
+  padding: 10px;
+  height: 105px;
+  width: 800px;
+}

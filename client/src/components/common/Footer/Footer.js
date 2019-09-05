@@ -1,37 +1,20 @@
 //Footer
 //==============
 import React from 'react';
-import JA from "../../../images/ja-emblem2.png"
+import JA from "../../../images/ja-emblem2.png";
 import { Row, Col, Card } from "react-bootstrap";
-import Android from "../../../images/android.png"
-import IOS from "../../../images/ios.png"
+import Android from "../../../images/android.png";
+import IOS from "../../../images/ios.png";
+import '../../../app.css';
 
 
-var footerStyle = {
-    backgroundColor: "#ddd",
-    borderTop: "1px solid #E7E7E7",
-    textAlign: "center",
-    padding: "10px",
-    position: "fixed",
-    left: "0",
-    bottom: "0",
-    height: "105px",
-    width: "100%"
-}
-
-var phantom = {
-    display: 'block',
-    padding: '10px',
-    height: '105px',
-    width: '800px',
-}
 
 //Functional Footer
 function Footer({ children }) {
     return (
         <div>
-                <div style={phantom} />
-                <div style={footerStyle}>
+                <div className="phantom" />
+                <div className="footer">
                     {children}
                    <Card> 
                        <Row>
