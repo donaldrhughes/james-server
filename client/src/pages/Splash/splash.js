@@ -8,6 +8,7 @@ import "./splash.css";
 import privateHelpers from '../../components/PrivateRoute/helpers/private.helper'
 import Lobby from "../../components/Lobby/index";
 import Nav from '../../components/common/Nav'
+import Header from '../../components/common/Header'
 // import Logout from "../../components/common/Logout"
 
 //Contexts
@@ -22,31 +23,24 @@ export default class Splash extends Component {
         return (
             <section className="splashbg">
                 <Row>
-                    <Col />
-                    <Col>
-                  
-                    <div className="head">
+                    <Col> <div className="head">
                             <p>Welcome, {this.props.username}.</p>
-                        </div>
-                   
+                        </div></Col>
+                    <Col></Col>
+                    <Col><Nav /></Col>
+                </Row>
+                <Row>
+                    {/* <Col /> */}
+                    <Col>
+                        <Header></Header>
                     </Col>
-                   <Col>
-                   <Nav />
-                   </Col>
+                    {/* <Col /> */}
                 </Row>
                 <Row>
                     <Col />
                     <Col-6>
                     <Lobby tokenData={tokenData} />
-                    </Col-6>
-                    <Col />
-                </Row>
-                <Row>
-                    <Col />
-                    <Col-6>
-                        
-                        {/* <Logout></Logout> 
-                        <div className="#"></div>*/}
+                   
                     </Col-6>
                     <Col />
                 </Row>
