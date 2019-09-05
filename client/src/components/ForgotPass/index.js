@@ -20,9 +20,9 @@ class ForgotPass extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
-  }
+  // validateForm() {
+  //   return this.state.email.length > 0 && this.state.password.length > 0;
+  // }
 
   handleChange = event => {
     this.setState({
