@@ -30,14 +30,13 @@ var phantom = {
 function Footer({ children }) {
     return (
         <div>
-            
                 <div style={phantom} />
                 <div style={footerStyle}>
                     {children}
                    <Card> 
                        <Row>
-                        <Col><img src={Android} alt="Android"></img></Col>
-                        <Col><img src={IOS} alt="IOS"></img></Col>
+                        <Col><img width="100px" src={Android} alt="Android"></img></Col>
+                        <Col><img width="100px" src={IOS} alt="IOS"></img></Col>
                         <Col><div className="emblem"><img width="35px" src={JA} alt="JA"></img></div></Col>
                     </Row>
                     </Card>
