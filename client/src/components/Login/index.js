@@ -71,7 +71,6 @@ class Login extends Component {
   render() {
     if (this.state.loading) return <Loader />;
     return (
-
       <Card className="loginText">
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="email">
