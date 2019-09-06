@@ -7,6 +7,7 @@ import '../../app.css';
 import privateHelpers from '../../components/PrivateRoute/helpers/private.helper'
 import UpdateUser from "../../components/updateUser/index"
 import Nav from '../../components/common/Nav'
+import Footer from "../../components/common/Footer/Footer"
 
 export default class Profile extends React.Component {
     render() {
@@ -30,6 +31,11 @@ export default class Profile extends React.Component {
                         <Col><Card><UpdateUser tokenData={tokenData} /></Card></Col>
                         <Col />
                     </Row>   
+                    <Row>
+                        <Col></Col>
+                        <Col><Footer /></Col>
+                        <Col />
+                    </Row>
             </section>
         );
     }
