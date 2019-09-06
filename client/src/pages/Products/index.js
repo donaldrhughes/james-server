@@ -25,7 +25,7 @@ export default class Home extends Component {
                     <Col />
                     <Col>
                     <div className="head">
-                            Products
+                    Finest Standard of Excellence
                         </div>
                     </Col>
                    <Col>
