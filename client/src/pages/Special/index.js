@@ -9,6 +9,7 @@ import privateHelpers from '../../components/PrivateRoute/helpers/private.helper
 // import Lobby from "../../components/Lobby/index";
 import Nav from '../../components/common/Nav';
 import Footer from "../../components/common/Footer/Footer"
+import Deals from "../../components/Deals"
 // import Logout from "../../components/common/Logout";
 
 //Contexts
@@ -25,10 +26,7 @@ export default class Special extends Component {
                 <Row>
                     <Col />
                     <Col>
-                  
-                    <div className="head">
-                            Specials
-                        </div>
+                   <Deals />
                     </Col>
                    <Col>
                    <Nav />

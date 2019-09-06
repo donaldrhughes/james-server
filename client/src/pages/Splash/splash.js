@@ -23,26 +23,17 @@ export default class Splash extends Component {
         return (
             <section className="splashbg">
                 <Row>
-                    <Col> 
-                    <div className="splashtext">
-                            <p>Welcome, {this.props.username}.</p>
-                        </div>
-                        </Col>
+                    <Col><div className="splashtext">Welcome, {this.props.username}.</div></Col>
                     <Col></Col>
                     <Col><Nav /></Col>
                 </Row>
                 <Row>
-                    {/* <Col /> */}
-                    <Col>
-                        <Header></Header>
-                    </Col>
-                    {/* <Col /> */}
+                    <Col><Header></Header></Col>
                 </Row>
                 <Row>
                     <Col />
                     <Col-6>
                     <Lobby tokenData={tokenData} />
-                   
                     </Col-6>
                     <Col />
                 </Row>
@@ -51,8 +42,6 @@ export default class Splash extends Component {
                         <Col><Footer /></Col>
                         <Col />
                     </Row>
-
-
             </section>
         );
     }

@@ -45,7 +45,7 @@ class Nav extends Component {
                     <Col><Card>
                         <div className="menu">
                             <ButtonToolbar>
-                                {['Success'].map(
+                                {['Secondary'].map(
                                     variant => (
                                         <div className="dropbtn">
                                             <DropdownButton

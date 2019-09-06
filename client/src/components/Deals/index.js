@@ -23,7 +23,13 @@ class Deals extends Component {
     return (
       <div>
         <Card>
-          <div className=""> James Albert Cosmetics - Try our products.</div>
+          <div className=""> Our Special Deals</div>
+          <div className="tophead">Finest Standard of Excellence</div>
+          <div className="toptext">Worldwide Reputation for Superior Quality</div>
+          <div className="tophead">Technologically Advanced</div>
+          <div className="toptext">Extensive and Innovative Research</div>
+          <div className="tophead">Elegance and Luxury</div>
+          <div className="toptext">Gentle and Sophisticated</div>
         </Card>
       </div>
     );

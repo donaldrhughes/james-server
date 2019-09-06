@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { withRouter } from 'react-router-dom';
-// import { Row, Col, Button, FormGroup, FormControl, Card } from "react-bootstrap";
+import { withRouter, Link } from 'react-router-dom';
+import { Row, Col, Button,
+  // FormGroup, FormControl, 
+  Card } from "react-bootstrap";
 // import axios from 'axios';
 import '../../app.css'
 import "./store.css";
@@ -77,64 +79,32 @@ componentDidMount(){
   render() {
     if (this.state.loading) return <Loader />;
     return (
-     <div>
-        {/* <Card className="loginText">
-          <form onSubmit={this.handleSubmit}>
-            <FormGroup controlId="email">
-              <div className="head center">Login</div>
-              <Row>
-                <FormControl
-                  type="email"
-                  className="inputBox"
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                  placeholder="Email" />
-              </Row>
-            </FormGroup>
-            <FormGroup controlId="password" >
-              {/* <div className="#">Password</div> 
-              <Row>
-             <FormControl
-                  type="password"
-                  className="inputBox"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                  placeholder="Password" />
-              </Row>
-            </FormGroup>
-            <Row>
-              <Col><input className="btn align" type="submit" value="Enter" /></Col>
-            </Row></form>
-          <Row>
-            <Col><div className="join align">Join Up</div></Col>
+     
+       <Card className="store center">
+       <div className="storeHead">Beauty Supply</div>
+       <form onSubmit={this.handleSubmit}>
+       <Row>
+            <Col></Col>
+            <Col></Col>
+            <Col></Col>
           </Row>
           <Row>
-            <Col><Link to="/register">
-              <Button className="regBtn align" type="submit">
-                Register
-              </Button>
-            </Link></Col>
+            <Col></Col>
           </Row>
           <Row>
-            <Col><div className="align">Forgot Password?</div></Col>
-          </Row>
-          <Row>
-            <Col><Link to="/forgot">
-              <Button className="forgotBtn align" type="submit">
-                Reset
+            <Col>
+            <Link to="/forgot">
+              <Button className="btn buyBtn center" type="submit">
+                Buy
                   </Button>
-            </Link></Col>
+            </Link>
+            </Col>
           </Row>
+          </form>
+          </Card>
+    )}
+  };
 
-          <Row>
-            <Col></Col>
-            <Col></Col>
-            <Col></Col>
-          </Row>
-        </Card> */}
-        </div>
-    );
-  }
-}
 
 export default withRouter(Store);
+

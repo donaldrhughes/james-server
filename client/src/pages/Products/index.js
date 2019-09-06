@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Row, Col } from "react-bootstrap";
-// import Logo from "../../images/JA-Logo-sml.png";
+import { Card, Row, Col } from "react-bootstrap";
+// import img from "../../images/JA-Logo-sml.png";
 import '../../app.css'
 import "./products.css";
 
@@ -21,22 +21,16 @@ export default class Home extends Component {
     render() {
         return (
             <section className="productsbg">
-                    <Row>
+                <Row>
                     <Col />
-                    <Col>
-                    <div className="head">
-                    Finest Standard of Excellence
-                        </div>
-                    </Col>
-                   <Col>
-                   <Nav />
-                   </Col>
+                    <Col><Card><div className="head">Finest Standard of Excellence</div></Card></Col>
+                    <Col><Nav /></Col>
                 </Row>
-                    <Row>
-                        <Col></Col>
-                        <Col><Store /></Col>
-                        <Col />
-                    </Row>
+                <Row>
+                    <Col></Col>
+                    <Col><Store /></Col>
+                    <Col />
+                </Row>
             </section>
         );
     }

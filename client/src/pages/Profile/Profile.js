@@ -15,27 +15,21 @@ export default class Profile extends React.Component {
         // this.props = tokenData;
         return (
             <section className="updatebg">
-             <Row>
+                <Row>
                     <Col />
-                    <Col>
-                    <div className="head">
-                            Products
-                        </div>
-                    </Col>
-                   <Col>
-                   <Nav />
-                   </Col>
+                    <Col><Card><UpdateUser tokenData={tokenData} /></Card></Col>
+                    <Col><Nav /></Col>
                 </Row>
-                    <Row>
-                        <Col />
-                        <Col><Card><UpdateUser tokenData={tokenData} /></Card></Col>
-                        <Col />
-                    </Row>   
-                    <Row>
-                        <Col></Col>
-                        <Col><Footer /></Col>
-                        <Col />
-                    </Row>
+                <Row>
+                    <Col />
+                    <Col></Col>
+                    <Col />
+                </Row>
+                <Row>
+                    <Col></Col>
+                    <Col><Footer /></Col>
+                    <Col />
+                </Row>
             </section>
         );
     }
