@@ -1,0 +1,24 @@
+    $border: 1px solid grey;
+
+    .regBtn {
+      background-color: rgb(91, 8, 91);
+    }
+    .forgotBtn{
+      background-color: black;
+    }
+    .loginBtn {
+      margin-top:0;
+      background-color: rgb(26, 26, 152);
+  }
+    .separator {
+      border-top: $border;
+      margin-top: 2%;
+    }
+    .separator2 {
+      margin-top:2%;
+      border-left: $border;
+    }
+    .mfix {
+      margin-top:2%;
+    }
+    

@@ -1,0 +1,30 @@
+{
+    "development": {
+      "username": "root",
+      "password": "root",
+      "database": "james_db",
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "port":"3306",
+      
+      "pool": {
+          "max": 5,
+          "min": 0,
+          "idle": 10000
+      },
+      "define": {
+          "paranoid": true
+      }
+    },
+    "test": {
+      "username": "root",
+      "password": "root",
+      "database": "james_db",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "use_env_variable": "JAWSDB_URL",
+      "dialect": "mysql"
+    }
+  }
