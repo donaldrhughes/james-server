@@ -71,14 +71,14 @@ code {
     transition-duration: 0.4s;
     font-size:16px;
     color: white;
-    background-color: rgb(26, 26, 152);
+    /* background-color: rgb(26, 26, 152); */
 }
 .btn:hover{
     background-color: lightseagreen;
     color:black
 }
 .head {
-    color: hotpink;
+    color: darkcyan;
     font-size: 22px;
     font-weight: bold;
 }
@@ -126,4 +126,15 @@ code {
   font-weight: bold;
   color: lightgoldenrodyellow;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.dropbtn {
+  background-color: black;
+  color: black;
+}
+.cancelbtn {
+  background-color: rgb(26, 26, 152);
+}
+.splashtext {
+  color: hotpink;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }

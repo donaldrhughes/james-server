@@ -35,7 +35,7 @@ class Cancel extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input className="cancelBtn btn" type="submit" value="Cancel" />
+                    <input className="cancelbtn btn" type="submit" value="Cancel" />
                 </form>
             </div>
         );
