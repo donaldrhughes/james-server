@@ -125,138 +125,121 @@ class UpdateUser extends React.Component {
 
   render() {
     return (
-      <div className="back">
-        <Card>
-          <Row>
-            {/* <Col></Col> */}
-            <Col><div className="head">Update your profile</div>
-              <div align="right">
-                <div>Username: {this.state.username} </div>
-              
-                <div>Email: {this.state.email}</div>
-               
-                <div className="#" align="center">
-                  
-          <form onSubmit={this.handleSubmit}>
-                    <FormGroup>
-                      <FormControl
-                        id="address"
-                        label="address"
-                        type="address"
-                        value={this.state.address}
-                        onChange={this.handleChange}
-                        autoComplete="address"
-                        placeholder="address"
-                        margin="normal" />
-                    </FormGroup>
-                    <FormGroup>
-                      <FormControl
-                        id="city"
-                        label="city"
-                        type="city"
-                        value={this.state.city}
-                        onChange={this.handleChange}
-                        autoComplete="current-city"
-                        placeholder="city"
-                        margin="normal"
-                      />
-                    </FormGroup>
-                    <FormGroup>
-                      <FormControl
-                        id="state"
-                        label="state"
-                        type="text"
-                        value={this.state.state}
-                        onChange={this.handleChange}
-                        autoComplete="mm-dd-yy"
-                        placeholder="state"
-                        margin="normal" />
-                    </FormGroup>
-                    <FormGroup>
-                      <FormControl
-                        id="zip"
-                        label="zip"
-                        type="text"
-                        value={this.state.zip}
-                        onChange={this.handleChange}
-                        autoComplete="zip"
-                        placeholder="zip"
-                        margin="normal" />
-                    </FormGroup>
-                    <FormGroup>
-                      <FormControl
-                        id="firstName"
-                        label="firstName"
-                        type="text"
-                        value={this.state.firstName}
-                        onChange={this.handleChange}
-                        autoComplete="firstName"
-                        placeholder="firstName"
-                        margin="normal" />
-                    </FormGroup>
-                    <FormGroup>
-                      <FormControl
-                        id="lastName"
-                        label="lastName"
-                        type="text"
-                        value={this.state.lastName}
-                        onChange={this.handleChange}
-                        autoComplete="lastName"
-                        placeholder="lastName"
-                        margin="normal" />
-                    </FormGroup>
-                    <FormGroup>
-                      <FormControl
-                        id="phone"
-                        label="phone"
-                        type="text"
-                        value={this.state.phone}
-                        onChange={this.handleChange}
-                        autoComplete="phone"
-                        placeholder="phone"
-                        margin="normal" />
-                    </FormGroup>
-                    <FormGroup>
-                      <FormControl
-                        id="bio"
-                        label="bio"
-                        type="text"
-                        value={this.state.bio}
-                        onChange={this.handleChange}
-                        autoComplete="bio"
-                        placeholder="bio"
-                        margin="normal" />
-                    </FormGroup>
-                    <input className="submit btn btn-outline-secondary" type="submit" value="Update Profile" />
-                  </form>
-                </div>
-
-                <div>Birthday: {this.state.dob}</div>
-             
-                <div>FirstName: {this.state.firstName}</div>
-             
-                <div>LastName: {this.state.lastName}</div>
-               
-                <div> Phone: {this.state.phone}</div>
-              
-                <div> Address: {this.state.address}</div>
-           
-                <div> City: {this.state.city}</div>
-             
-                <div> State: {this.state.state}</div>
-     
-                <div> Zip: {this.state.zip}</div>
-           
-                <div> User Bio: {this.state.bio}</div>
-           
-                
-              </div></Col>
-            {/* <Col></Col> */}
-
-          </Row>
-
-        </Card>
-      </div >
+      <Card>
+        <Row>
+          {/* <Col></Col> */}
+          <Col><div className="head">Update your profile</div>
+            <div align="right">
+              <div>Username: {this.state.username} </div>
+              <div>Email: {this.state.email}</div>
+              <div className="#" align="center">
+                <form onSubmit={this.handleSubmit}>
+                  <FormGroup>
+                    <FormControl
+                      id="address"
+                      label="address"
+                      type="address"
+                      value={this.state.address}
+                      onChange={this.handleChange}
+                      autoComplete="address"
+                      placeholder="address"
+                      margin="normal" />
+                  </FormGroup>
+                  <FormGroup>
+                    <FormControl
+                      id="city"
+                      label="city"
+                      type="city"
+                      value={this.state.city}
+                      onChange={this.handleChange}
+                      autoComplete="current-city"
+                      placeholder="city"
+                      margin="normal"
+                    />
+                  </FormGroup>
+                  <FormGroup>
+                    <FormControl
+                      id="state"
+                      label="state"
+                      type="text"
+                      value={this.state.state}
+                      onChange={this.handleChange}
+                      autoComplete="mm-dd-yy"
+                      placeholder="state"
+                      margin="normal" />
+                  </FormGroup>
+                  <FormGroup>
+                    <FormControl
+                      id="zip"
+                      label="zip"
+                      type="text"
+                      value={this.state.zip}
+                      onChange={this.handleChange}
+                      autoComplete="zip"
+                      placeholder="zip"
+                      margin="normal" />
+                  </FormGroup>
+                  <FormGroup>
+                    <FormControl
+                      id="firstName"
+                      label="firstName"
+                      type="text"
+                      value={this.state.firstName}
+                      onChange={this.handleChange}
+                      autoComplete="firstName"
+                      placeholder="firstName"
+                      margin="normal" />
+                  </FormGroup>
+                  <FormGroup>
+                    <FormControl
+                      id="lastName"
+                      label="lastName"
+                      type="text"
+                      value={this.state.lastName}
+                      onChange={this.handleChange}
+                      autoComplete="lastName"
+                      placeholder="lastName"
+                      margin="normal" />
+                  </FormGroup>
+                  <FormGroup>
+                    <FormControl
+                      id="phone"
+                      label="phone"
+                      type="text"
+                      value={this.state.phone}
+                      onChange={this.handleChange}
+                      autoComplete="phone"
+                      placeholder="phone"
+                      margin="normal" />
+                  </FormGroup>
+                  <FormGroup>
+                    <FormControl
+                      id="bio"
+                      label="bio"
+                      type="text"
+                      value={this.state.bio}
+                      onChange={this.handleChange}
+                      autoComplete="bio"
+                      placeholder="bio"
+                      margin="normal" />
+                  </FormGroup>
+                  <input className="submit btn btn-outline-secondary" type="submit" value="Update Profile" />
+                </form>
+              </div>
+              <div>Birthday: {this.state.dob}</div>
+              <div>FirstName: {this.state.firstName}</div>
+              <div>LastName: {this.state.lastName}</div>
+              <div> Phone: {this.state.phone}</div>
+              <div> Address: {this.state.address}</div>
+              <div> City: {this.state.city}</div>
+              <div> State: {this.state.state}</div>
+              <div> Zip: {this.state.zip}</div>
+              <div> User Bio: {this.state.bio}</div>
+            </div>
+          </Col>
+          {/* <Col></Col> */}
+        </Row>
+      </Card>
     );
   }
 }

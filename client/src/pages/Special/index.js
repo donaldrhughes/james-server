@@ -8,6 +8,7 @@ import "./special.css";
 import privateHelpers from '../../components/PrivateRoute/helpers/private.helper'
 // import Lobby from "../../components/Lobby/index";
 import Nav from '../../components/common/Nav';
+import Footer from "../../components/common/Footer/Footer"
 // import Logout from "../../components/common/Logout";
 
 //Contexts
@@ -50,10 +51,10 @@ export default class Special extends Component {
                     <Col />
                 </Row>
                 <Row>
-                    <Col />
-                    <Col></Col>
-                    <Col />
-                </Row>
+                        <Col></Col>
+                        <Col><Footer /></Col>
+                        <Col />
+                    </Row>
 
 
             </section>
