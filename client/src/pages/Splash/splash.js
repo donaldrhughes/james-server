@@ -15,7 +15,6 @@ import Footer from "../../components/common/Footer/Footer"
 //Contexts
 import { MainContext } from '../../contexts/MainContext';
 
-
 export default class Splash extends Component {
     static contextType = MainContext;
     render() {
@@ -24,9 +23,11 @@ export default class Splash extends Component {
         return (
             <section className="splashbg">
                 <Row>
-                    <Col> <div className="head">
+                    <Col> 
+                    <div className="splashtext">
                             <p>Welcome, {this.props.username}.</p>
-                        </div></Col>
+                        </div>
+                        </Col>
                     <Col></Col>
                     <Col><Nav /></Col>
                 </Row>

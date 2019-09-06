@@ -45,21 +45,23 @@ class Nav extends Component {
                     <Col><Card>
                         <div className="menu">
                             <ButtonToolbar>
-                                {['Secondary'].map(
+                                {['Success'].map(
                                     variant => (
-                                        <DropdownButton
-                                            title={"Menu"}
-                                            variant={variant.toLowerCase()}
-                                            id={`dropdown-variants-${variant}`}
-                                            key={variant}>
-                                            {/* <Dropdown.Item eventKey="3" active>Active Item</Dropdown.Item> */}
-                                            <Dropdown.Item eventKey="1" onClick={() => this.props.history.push('/splash')} >Main</Dropdown.Item>
-                                            <Dropdown.Item eventKey="2" onClick={() => this.props.history.push('/products')} >Products</Dropdown.Item>
-                                            <Dropdown.Item eventKey="3" onClick={() => this.props.history.push('/specials')} >Specials</Dropdown.Item>
-                                            <Dropdown.Item eventKey="8" onClick={() => this.props.history.push('/profile')} >Profile</Dropdown.Item>
-                                            <Dropdown.Divider />
-                                            <Dropdown.Item eventKey="9" onClick={() => this.props.history.push('/logout')} >Logout</Dropdown.Item>
-                                        </DropdownButton>
+                                        <div className="dropbtn">
+                                            <DropdownButton
+                                                title={"Menu"}
+                                                variant={variant.toLowerCase()}
+                                                id={`dropdown-variants-${variant}`}
+                                                key={variant}>
+                                                {/* <Dropdown.Item eventKey="3" active>Active Item</Dropdown.Item> */}
+                                                <Dropdown.Item eventKey="1" onClick={() => this.props.history.push('/splash')} >Main</Dropdown.Item>
+                                                <Dropdown.Item eventKey="2" onClick={() => this.props.history.push('/products')} >Products</Dropdown.Item>
+                                                <Dropdown.Item eventKey="3" onClick={() => this.props.history.push('/specials')} >Specials</Dropdown.Item>
+                                                <Dropdown.Item eventKey="8" onClick={() => this.props.history.push('/profile')} >Profile</Dropdown.Item>
+                                                <Dropdown.Divider />
+                                                <Dropdown.Item eventKey="9" onClick={() => this.props.history.push('/logout')} >Logout</Dropdown.Item>
+                                            </DropdownButton>
+                                        </div>
                                     ),
                                 )}
                             </ButtonToolbar>
