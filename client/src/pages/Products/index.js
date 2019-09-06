@@ -9,6 +9,7 @@ import "./products.css";
 // import Footer from "../../components/common/Footer/Footer"
 import Store from "../../components/Store";
 import Nav from '../../components/common/Nav'
+import Footer from "../../components/common/Footer/Footer"
 
 // //Contexts
 import { MainContext } from '../../contexts/MainContext';
@@ -29,6 +30,11 @@ export default class Home extends Component {
                 <Row>
                     <Col></Col>
                     <Col><Store /></Col>
+                    <Col />
+                </Row>
+                <Row>
+                    <Col></Col>
+                    <Col><Footer /></Col>
                     <Col />
                 </Row>
             </section>
